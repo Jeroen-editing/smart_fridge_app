@@ -1,8 +1,8 @@
-###### Rebuilding this project.
+##### - - - Rebuilding this project - - -
 
 - simplifying index page (starting for smartphone).
 - adding responsiveness (starting for smartphone).
-- making multipage for app-explanation and form.
+- making multipage with separate app-explanation and form.
 - fixing the small JS bug.
     
 In this order.

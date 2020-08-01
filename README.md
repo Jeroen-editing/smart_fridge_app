@@ -1,6 +1,5 @@
-##### Rebuilding this project
 ###### - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
+##### Rebuilding this project :
 ###### In this order.
 
 - simplifying index page (starting for smartphone).

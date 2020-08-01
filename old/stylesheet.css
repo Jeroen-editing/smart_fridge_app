@@ -1,0 +1,469 @@
+@charset "UTF-8";
+* {
+  margin: 0 auto; }
+
+body {
+  max-width: 1280px;
+  background-image: url("assets/img/topPhoto-small-01.jpg");
+  background-position-x: center;
+  background-position-y: -300px;
+  background-repeat: no-repeat;
+  background-size: 1280px;
+  background-attachment: fixed; }
+
+#navBar {
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  min-height: 44px;
+  width: 1280px;
+  background-color: #800018;
+  border-bottom: 2px solid #014040;
+  padding: 6px 0 12px 0; }
+
+.navButton {
+  float: left;
+  margin: 8px 20px 0 20px;
+  padding: 2px 10px 4px 10px;
+  min-height: 32px;
+  background-color: #F2B035;
+  border: 2px solid #014040;
+  border-radius: 4px;
+  box-shadow: 0 0 8px black; }
+  .navButton a {
+    font-family: 'Gruppo', cursive;
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 22px;
+    color: #014040; }
+
+.navButton:hover {
+  background-color: #4EB4BF; }
+
+#home {
+  margin-left: 48px; }
+
+#navBreakOne, #navBreakTwo {
+  min-width: 10px;
+  float: left;
+  margin: 8px 24px 0 24px;
+  padding: 2px 0 4px 0;
+  min-height: 32px;
+  background-color: #8D8F53;
+  border: 2px solid #014040;
+  border-radius: 4px;
+  box-shadow: 0 0 8px black; }
+
+#navRecipeOne {
+  margin-left: 20px; }
+
+#navRightBox {
+  float: right; }
+
+#explainButton {
+  margin-right: 20px; }
+
+#navContact {
+  margin-right: 48px; }
+
+/*
+#photoSection {
+  background-image: url("./img/topPhoto.jpg");
+  background-position-x: center;
+  background-position-y: 62px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+*/
+#searchBox {
+  position: fixed;
+  float: left;
+  min-width: 360px;
+  min-height: 100px;
+  top: 64px;
+  background-color: rgba(140, 95, 39, 0.4);
+  border-bottom: 1px solid #014040;
+  border-right: 2px solid #014040; }
+
+#ingredientInput {
+  display: block;
+  float: bottom;
+  margin: 12px 0 4px 30px;
+  padding-left: 8px;
+  height: 34px;
+  min-width: 300px;
+  color: #014040;
+  font-family: 'Gruppo', cursive;
+  font-weight: 900;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid #014040;
+  border-radius: 6px;
+  box-shadow: 0 0 6px black; }
+
+#enterSearch {
+  margin: 4px 0 12px 30px;
+  padding-bottom: 16px;
+  height: 34px;
+  min-width: 300px;
+  color: #014040;
+  font-family: 'Gruppo', cursive;
+  font-weight: 900;
+  font-size: 24px;
+  letter-spacing: 2px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px black;
+  background-color: #F2B035;
+  border: 2px solid #014040; }
+
+#enterSearch:hover {
+  background-color: #4EB4BF; }
+
+#ingredientInput:invalid ~ span:after {
+  content: '✖';
+  padding-left: 5px;
+  position: absolute; }
+
+#ingredientInput:valid ~ span:after {
+  content: '✓';
+  padding-left: 5px;
+  position: absolute; }
+
+#titleBox {
+  right: 0;
+  margin: 62px 0 0 360px;
+  max-width: 920px;
+  height: 102px;
+  background-color: rgba(131, 153, 96, 0.6);
+  border-bottom: 1px solid #014040; }
+  #titleBox .spaceBetweenOne {
+    height: 1022px;
+    margin-left: 60px; }
+  #titleBox #webName {
+    padding-top: 10px;
+    color: #014040;
+    font-family: 'Jura', sans-serif;
+    font-weight: 900;
+    font-size: 66px;
+    text-align: left; }
+
+#ingredientBox {
+  position: fixed;
+  top: 165px;
+  min-width: 360px;
+  height: 634px;
+  min-height: 632px;
+  background-color: rgba(242, 220, 107, 0.4);
+  border-right: 2px solid #014040;
+  border-bottom: 1px solid #014040; }
+  #ingredientBox #search-result {
+    max-width: 360px;
+    height: 632px;
+    overflow-x: auto; }
+
+.ingredient, .myIngredient {
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 12px;
+  margin: 4px 4px;
+  display: inline-block;
+  border: 2px solid #78564C;
+  border-radius: 8px;
+  background-color: rgba(2, 89, 81, 0.3); }
+
+.ingredient img, .myIngredient img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+  background-color: whitesmoke; }
+
+.myIngredient img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px; }
+
+.ingredient img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50px; }
+
+.ingredient {
+  background-color: rgba(140, 95, 39, 0.4);
+  border: 2px solid #78564C; }
+
+.myIngredient {
+  background-color: rgba(2, 89, 81, 0.3);
+  border: 2px solid #014040; }
+
+.myIngredient span {
+  display: block;
+  text-align: center; }
+
+#fridgeBox {
+  top: 165px;
+  margin: 0 0 0 360px;
+  min-height: 392px;
+  min-width: 920px;
+  border-bottom: 1px solid #014040; }
+  #fridgeBox #fridge {
+    padding: 0 4px;
+    min-height: 330px;
+    height: 340px;
+    overflow-y: scroll; }
+  #fridgeBox #logo {
+    float: left; }
+  #fridgeBox #random #btn-chef {
+    float: right;
+    margin: 0 30px 0 0;
+    height: 32px;
+    background-color: #F2B035;
+    border: 2px solid #014040;
+    border-radius: 4px;
+    color: #014040;
+    box-shadow: 0 0 8px black;
+    font-family: 'Gruppo', cursive;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 22px; }
+
+.midsectionOne, .midsectionTwo {
+  margin-left: 360px;
+  max-width: 920px;
+  border-left: 2px solid #014040; }
+
+#explainBox, #contactBox {
+  min-height: 400px; }
+
+#recipeOne {
+  min-height: 720px;
+  border-bottom: 1px solid #014040; }
+
+#photoRecipeBox {
+  float: left;
+  width: 320px;
+  height: 241px;
+  border-right: 1px solid #014040;
+  border-bottom: 1px solid #014040;
+  background-image: url("assets/img/tomatos-small.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#beforeRecipeTitleBox, #beforeExplainTitleBox, #beforeContactTitleBox {
+  margin-left: 320px;
+  max-width: 600px;
+  height: 72px;
+  background-color: rgba(140, 95, 39, 0.3);
+  border-bottom: 1px solid #014040; }
+
+#recipeOneTitleBox {
+  margin-left: 320px;
+  max-width: 600px;
+  height: 96px;
+  background-color: rgba(131, 153, 96, 0.6);
+  border-bottom: 1px solid #014040;
+  padding: 20px 0 0 10px;
+  color: #014040;
+  font-family: 'Jura', sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  text-align: left; }
+
+#titleRecipeOne {
+  margin-left: 12px; }
+
+#afterRecipeTitleBox, #afterExplainTitleBox, #afterContactTitleBox {
+  margin-left: 320px;
+  max-width: 600px;
+  height: 51px;
+  background-color: rgba(140, 95, 39, 0.3); }
+
+#contentRecipeOne {
+  min-height: 526px;
+  background-color: rgba(140, 95, 39, 0.3); }
+
+/*
+#beforeExplainTitleBox {
+  margin-left: 320px;
+  max-width: 600px;
+  height: 72px;
+  background-color: rgba(140, 95, 39, 0.3);
+  border-bottom: 1px solid #014040;
+}
+*/
+#photoExplainBox {
+  float: left;
+  min-width: 320px;
+  min-height: 241px;
+  border-right: 1px solid #014040;
+  border-bottom: 1px solid #014040;
+  background-image: url("assets/img/spices-O2-small.jpg");
+  background-color: #8c5f27;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#explainTitleBox, #contactTitleBox {
+  margin-left: 320px;
+  max-width: 600px;
+  height: 96px;
+  color: #014040;
+  font-family: 'Jura', sans-serif;
+  font-weight: 900;
+  font-size: 40px;
+  background-color: rgba(131, 153, 96, 0.6);
+  border-bottom: 1px solid #014040;
+  padding: 20px 0 0 10px;
+  text-align: left; }
+
+#titleExplain, #titleContact {
+  padding: 14px; }
+
+#explainTextBox, #formBox {
+  padding: 40px 0 20px 0;
+  background-color: rgba(140, 95, 39, 0.3);
+  border-bottom: 1px solid #014040; }
+
+#explainTextBox {
+  min-height: 1000px; }
+
+.explainText, .explainSubTitles {
+  padding: 4px 6px;
+  background-color: rgba(120, 86, 76, 0.6);
+  border-radius: 2px;
+  box-shadow: 0 0 8px black; }
+
+.explainSubTitles {
+  margin: 28px 28px 0 28px;
+  padding-top: 2px;
+  color: #014040;
+  font-size: 26px;
+  font-family: 'Jura', sans-serif;
+  font-weight: 900;
+  width: 200px;
+  border: 1px solid #014040;
+  background-color: rgba(131, 153, 96, 0.6); }
+
+.explainText {
+  margin: 12px 28px;
+  color: black;
+  font-size: 22px;
+  font-family: 'Gruppo', cursive;
+  font-weight: 900;
+  border: 1px solid #014040; }
+
+#photoContactBox {
+  float: left;
+  min-width: 320px;
+  min-height: 241px;
+  border-right: 1px solid #014040;
+  border-bottom: 1px solid #014040;
+  background-image: url("assets/img/food-and-cooking-07-small.jpg");
+  background-color: rgba(140, 95, 39, 0.4);
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#contactBox {
+  height: 530px; }
+
+#formBox {
+  height: 436px; }
+
+.formFieldOne, .formFieldTwo {
+  padding: 10px;
+  min-width: 380px;
+  width: 380px;
+  min-height: 200px;
+  border: 1px solid #014040;
+  border-radius: 2px;
+  background-color: rgba(140, 95, 39, 0.3);
+  box-shadow: 0 0 8px black; }
+
+.formFieldOne {
+  float: left;
+  margin-left: 30px;
+  padding-top: 18px;
+  padding-left: 20px; }
+
+#firstName, #lastName, #mail {
+  width: 220px;
+  height: 24px;
+  margin-left: 146px;
+  padding-left: 8px;
+  color: black;
+  font-size: 16px;
+  font-family: 'Gruppo', cursive;
+  font-weight: 900;
+  border: 1px solid #014040;
+  border-radius: 2px;
+  background-color: rgba(242, 220, 107, 0.3);
+  box-shadow: 0 0 8px black; }
+
+.formLabel {
+  padding: 4px 6px;
+  color: #014040;
+  font-size: 18px;
+  font-family: 'Gruppo', cursive;
+  font-weight: 900;
+  border: 1px solid #014040;
+  background-color: rgba(120, 86, 76, 0.6);
+  border-radius: 2px;
+  box-shadow: 0 0 8px black; }
+
+#submit {
+  float: left;
+  margin: 10px 20px 0 -1px;
+  padding: 2px 10px 4px 10px;
+  min-width: 110px;
+  max-height: 34px;
+  color: #014040;
+  font-size: 22px;
+  font-family: 'Gruppo', cursive;
+  font-weight: 900;
+  background-color: #F2B035;
+  border: 2px solid #014040;
+  border-radius: 4px;
+  box-shadow: 0 0 8px black; }
+
+.formFieldTwo {
+  margin-top: 50px;
+  margin-left: 484px;
+  padding-top: 18px; }
+  .formFieldTwo #textLabel, .formFieldTwo #textField {
+    margin-left: 20px; }
+
+#textField {
+  margin-top: 26px;
+  padding: 4px 8px;
+  max-width: 336px;
+  height: 136px;
+  resize: none;
+  overflow: scroll;
+  color: black;
+  font-size: 16px;
+  font-family: 'Gruppo', cursive;
+  font-weight: 900;
+  border: 1px solid #014040;
+  border-radius: 2px;
+  background-color: rgba(242, 220, 107, 0.3);
+  box-shadow: 0 0 8px black; }
+
+/*
+.spaceBetweenTwo {
+  height: 210px; }
+
+.midsectionTwo {
+  background-image: url("../assets/theback3.jpg");
+  background-position-x: center;
+  background-position-y: 1089px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+
+
+
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Baloo', cursive;
+ */
+
+/*# sourceMappingURL=stylesheet.css.map */

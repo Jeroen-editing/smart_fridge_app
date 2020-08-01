@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148143243-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-148143243-1'),{ 'optimize_id': 'GTM-W9JS7P5'};
+    </script>
+   -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148143243-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'UA-148143243-1', {'optimize_id': 'GTM-W9JS7P5'});
+    </script>
+
+    <meta charset="UTF-8">
+    <title>Food app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Manage the ingredient in your fridge and have good receipt for your meal">
+    <meta name="keywords" content="Recipes, Ingredients, nutrients, grocery">
+    <meta name="author" content="Mame, Jeroen, Badr, Bona">
+
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fridge.png">
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Josefin+Sans|Lexend+Deca&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <nav id="navBar">
+        <div id="navLeftBox">
+            <button class="navButton" id="home"><a href="">Home</a></button>
+            <button id="navBreakOne"></button>
+            <button class="navButton" id="navReceipOne"><a href="">Receip 1</a></button>
+            <button class="navButton"><a href="">Receip 2</a></button>
+
+            <!--
+            <button class="navButton"><a href="">Receip 3</a></button>
+            -->
+
+        </div>
+
+        <div id="navRightBox">
+            <button class="navButton" id="explainButton"><a href="">How it works?</a></button>
+            <button id="navBreakTwo"></button>
+            <button class="navButton" id="navContact"><a href="">contact</a></button>
+        </div>
+
+        <div class="breakLine"></div>
+    </nav>
+</header>
+
+<aside id="searchBox">
+    <form action="#">
+        <input type="search" id="ingredientInput" placeholder="Enter your ingredients" size="30"
+               aria-label="Search through site content" name="S">
+        <button type="submit" id="enterSearch">Search</button>
+    </form>
+</aside>
+
+<section id="fridgeBox">
+    <div id="fridge">
+
+    </div>
+    <div id="random">
+        <button id="btn-chef">random</button>
+    </div>
+</section>
+
+<!--
+    <section id="searchBox">
+        <div>
+            <div id="search-result">
+                <template id="tpl-ingr">
+                   <span class="ingredient">
+                        <img class=ing-img src="" alt="">
+                        <span class="ing-name"> name </span>
+                        <button class="ing-add">add</button>
+                   </span>
+                </template>
+            </div>
+    </div>
+    <div class="breakLine"></div>
+</section>
+-->
+
+<main class="firstPage" id="mainPage">
+    <section class="mainSectionOne">
+        <div class="spaceBetweenOne"></div>
+
+        <h1 id="webName">Smart-Fridge</h1>
+
+        <article class="midsectionTwo">
+
+            <!--
+            <section>t
+                <div  id="searchList">
+                </div>
+            </section>
+            -->
+
+            <section>
+                <div id="receipOne">
+                    <h3 id="titelReceipOne">Receip 1.</h3>
+                    <div id="contentRecipeOne">
+                        <img id="recipeimage" src="" alt="">
+                        <p id="cooking"></p>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section>
+                <div id="receipTwo">
+                    <h3 id="titelReceipTwo">Receip 2.</h3>
+                    <div id="contentRecipeTwo">
+
+
+                    </div>
+
+                </div>
+            </section>
+
+            <!--
+            <section>
+                <div id="receipThree">
+                </div>
+            </section>
+            -->
+
+            <section>
+                <div id="explain">
+                    <h3 id="titelExplain">How it works.</h3>
+
+                </div>
+            </section>
+
+            <section>
+                <div id="contact">
+                    <h3 id="contactUs">Contact.</h3>
+
+                </div>
+            </section>
+        </article>
+    </section>
+
+    <!--
+    <div class="spaceBetweenOne"></div>
+    -->
+
+</main>
+
+<script src="badr.js"></script>
+
+</body>
+
+</html>
+
+<!--
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: block;">Top</button>
+ // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+-->

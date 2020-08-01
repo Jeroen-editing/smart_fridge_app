@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148143243-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-148143243-1'),{ 'optimize_id': 'GTM-W9JS7P5'};
+  </script>
+ -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148143243-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-148143243-1', { 'optimize_id': 'GTM-W9JS7P5'});
+</script>
+
+    <meta charset="UTF-8">
+    <title>Smart-fridge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Manage the ingredient in your fridge and have good receipt for your meal">
+    <meta name="keywords" content="Recipes, Ingredients, nutrients, grocery">
+    <meta name="author" content="Mame, Jeroen, Badr, Bona">
+
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cairo|Catamaran|Gruppo|Gugi|Jura|Khula|Ubuntu|Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <header>
+        <nav id="navBar">
+            <div id="navLeftBox">
+                <button class="navButton" id="home"><a href="">Home</a></button>
+                <button id="navBreakOne"></button>
+                <button class="navButton" id="navRecipeOne"><a href="#recipeImage">Receip</a></button>
+
+                <!--
+                <button class="navButton"><a href="">Receip 2</a></button>
+                <button class="navButton"><a href="">Receip 3</a></button>
+                -->
+
+            </div>
+
+            <div id="navRightBox">
+                <button class="navButton" id="explainButton"><a href="">How it works?</a></button>
+                <button id="navBreakTwo"></button>
+                <button class="navButton" id="navContact"><a href="#formBox">contact</a></button>
+            </div>
+
+            <div class="breakLine"></div>
+        </nav>
+    </header>
+
+    <section>
+        <div id="photoSection">
+        </div>
+    </section>
+
+    <aside id="searchBox">
+        <form action="#">
+            <input type="search" id="ingredientInput" placeholder="Enter your ingredients" size="23" aria-label="Search through site content" name="S">
+            <button type="submit" id="enterSearch">Search</button>
+        </form>
+    </aside>
+
+    <section id="titleBox">
+        <div class="spaceBetweenOne" id="webpageName">
+            <h1 id="webName">Smart-Fridge</h1>
+        </div>
+    </section>
+
+    <aside id="ingredientBox">
+        <div id="search-result">
+            <template id="tpl-ingr">
+               <span class="ingredient">
+                    <img class=ing-img src="" alt="">
+                    <div class="ing-name"> name </div>
+                   <!-- changed from div to span!!!-->
+               </span>
+            </template>
+        </div>
+    </aside>
+
+    <main class="firstPage" id="mainPage">
+
+        <article id="selectionBox">
+            <section id="fridgeBox">
+                <div id="fridge">
+
+                </div>
+                <!--
+                <div id="logo">
+                    <img src="img/transparent-fridge-icon-hotel-icon-5d66756de71669.8755568015669958219465.png" height="32" width="32" alt="fridgeIcon">
+                </div>
+                -->
+                <div id="random">
+                    <button id="btn-chef">Our chef's choice</button>
+                </div>
+            </section>
+        </article>
+
+        <section>
+            <article class="midsectionOne">
+                <section>
+                    <div id="recipeOne">
+                        <div id="photoRecipeBox">
+                            <img id="recipeImage" src="" alt="">
+                        </div>
+                        <div id="beforeRecipeTitleBox"></div>
+                        <div id="recipeOneTitleBox">
+                            <h3 id="titleRecipeOne">Recipe</h3>
+                        </div>
+                        <div id="afterRecipeTitleBox"></div>
+                        <div id="contentRecipeOne">
+                            <p id="recipeText"></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!--
+                <section>
+                    <div id="recipeTwo">
+                        <h3 id="titleRecipeTwo">Recipe 2.</h3>
+                        <div id="contentRecipeTwo">
+
+                        </div>
+                    </div>
+                </section>
+                -->
+
+                <!--
+                <section>
+                    <div id="receipThree">
+
+                    </div>
+                </section>
+                -->
+            </article>
+
+            <article class="midsectionTwo">
+                <section>
+
+                    <div id="explainBox">
+                        <div id="photoExplainBox">
+                            <img id="explainImage" src="" alt="">
+                        </div>
+                        <div id="beforeExplainTitleBox"></div>
+                        <div id="explainTitleBox">
+                            <h3 id="titleExplain">How it works</h3>
+                        </div>
+                        <div id="afterExplainTitleBox"></div>
+                        <div id="explainTextBox">
+                            <h4 class="explainSubTitles">Smartfridge</h4>
+                            <p class="explainText">
+                                Our Smartfridge will be making meals with the ingredients in your house!
+                            </p>
+                            <h4 class="explainSubTitles">Description</h4>
+                            <p class="explainText">
+                                Our Smartfridge can make food ideas based on your ingredients at home.
+                                It can also give you ideas for drinks such as milkshakes, homemade iced tea, etc..
+                                The website is totally free!
+                            </p>
+                            <p class="explainText">
+                                Prerequisites: You just need internet!
+                            </p>
+                            <p class="explainText">
+                                And ofcourse food at home!
+                            </p>
+
+                            <h4 class="explainSubTitles">Getting started</h4>
+                            <p class="explainText">
+                                Step 1 = Go to this link:<br>°° https://mahmutturgut.github.io/agile-PROJECT_NAME/index.html °°
+                            </p>
+                            <p class="explainText">
+                                Step 2 = Enter your ingredients in the input field and click on search.
+                            </p>
+                            <p class="explainText">
+                                Step 3 = Now you will see a list of food ideas of your ingredients.
+                            </p>
+                            <p class="explainText">
+                                Step 4 = Once you click on 1 of the meals you can see the recipe for the meal on the
+                                Recipe section or in your fridge.
+                            </p>
+                            <p class="explainText">
+                                Step 5 = When you click the ingredients in your fridge it will be removed.
+                            </p>
+                            <p class="explainText">
+                                Step 6 = There is random recipe that connects with the ingredients in your fridge.
+                            </p>
+                            <h4 class="explainSubTitles">Contact</h4>
+                            <p class="explainText">
+                                For more information you can contact with the form file.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div id="contactBox">
+                        <div id="photoContactBox">
+                            <img id="contactImage" src="" alt="">
+                        </div>
+                        <div id="beforeContactTitleBox"></div>
+                        <div id="contactTitleBox">
+                            <h3 id="titleContact">Contact</h3>
+                        </div>
+                        <div id="afterContactTitleBox"></div>
+                        <div id="formBox">
+                            <form action="mailto:mahmutturgut3863@gmail.com">
+                                <fieldset class="formFieldOne">
+                                    <label class="formLabel" for="firstName">First name:</label>
+                                    <br>
+                                    <input type="text" name="firstname" id="firstName" placeholder="Enter firstname" >
+                                    <br>
+                                    <label class="formLabel" for="lastName">Last name:</label>
+                                    <br>
+                                    <input type="text" name="lastName" id="lastName" placeholder="enter lastname">
+                                    <br>
+                                    <label class="formLabel" for="mail">Your email:</label>
+                                    <br>
+                                    <input type="email" name="mailto" id="mail" placeholder="someone@example.com">
+                                    <br>
+                                    <input type="submit" value="Send" id="submit">
+                                </fieldset>
+
+                                <fieldset class="formFieldTwo">
+                                    <label class="formLabel" for="textField" id="textLabel">Comments or questions:</label>
+                                    <textarea name="title" id="textField" rows="8" cols="43" placeholder="Enter you message"></textarea><br>
+                                    </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </section>
+
+        <!--
+        <div class="spaceBetweenOne"></div>
+        -->
+
+    </main>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
+<!--
+<button onclick="topFunction()" id="myBtn" title="Go to top" style="display: block;">Top</button>
+
+ // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+-->

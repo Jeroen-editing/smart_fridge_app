@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Manage the ingredient in your fridge and have good receipt for your meal">
+    <meta name="keywords" content="Recipes, Ingredients, nutrients, grocery">
+    <meta name="author" content="Mame, Jeroen, Badr, Bona">
+
+    <title>Smart-fridge</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/gray_fridge_icon.png">
+
+    <link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&family=Catamaran:wght@100;200;300;400;500;531;600;700;800;900&family=Gruppo&family=Jura:wght@300;400;500;515;600;700&family=Varela+Round&display=swap" rel="stylesheet"> 
+</head>
+<body>
+
+    <header class="header_box" id="headerBox">
+        <div class="btn_box_visible" id="navBtnBox">
+            <button class="nav_show_btn" id="showNavbar"><img src="assets/icon/nav_icon_small.png" alt=""></button>
+        </div>
+        <div class="webpage_name" id="webpageName">
+            <h1 class="title" id="webName">Smart-Fridge</h1>
+        </div>
+    </header>
+    
+    <nav class="hidden_nav" id="navBar">
+        <div class="btn_box_visible">
+            <button class="nav_hide_btn" id="hideNavbar"><img src="assets/icon/arrow_up_icon_small.png" alt=""></button>
+        </div>
+
+        <div class="nav_box">  
+            <button class="navButton" id="navRecipeOne"><a href="#recipeImage">Receip</a></button>
+            <button class="navBreak"></button>
+            <button class="navButton" id="explainButton"><a href="explain.html">How it works?</a></button>
+            <button class="navButton" id="navContact"><a href="contact.html">contact</a></button>
+            <!--
+            <button class="navButton" id="home"><a href="#"><img src="assets/icon/home_icon_small.png" alt=""></a></button>
+            -->
+        </div>
+    </nav>
+
+    <aside class="search_box" id="searchBox">
+        <form action="#">
+            <input type="search" class="ingredient_input" id="ingredientInput" placeholder="Enter your ingredients" size="23" aria-label="Search through site content" name="S">
+            <button type="submit" class="search_btn" id="enterSearch">Search</button>
+        </form>
+    </aside>
+
+    <aside class="ingredient_box" id="ingredientBox">
+        <div id="search-result">
+            <template id="tpl-ingr">
+               <span class="ingredient">
+                    <img class="ing-img" src="" alt="">
+                    <div class="ing-name"> name </div>
+                   <!-- changed from div to span!!!-->
+               </span>
+            </template>
+        </div>
+    </aside>
+
+    <main class="selection_box" id="mainPage">
+
+        <section class="fridge_box" id="selectionBox">
+            <div class="fridge_content" id="fridge">
+
+            </div>
+                
+            <div class="chef_box" id="random">
+                <button class="chef_btn" id="btn-chef">Our chef's choice</button>
+            </div>
+        </section>
+
+        <section class="recipe_box">
+            <div class="recipe_info" id="recipe">
+                <div class="recipe_photo_box" id="recipePhotoBox">
+                    <img class="recipe_photo" id="recipeImage" src="assets/img/food-and-cooking-08-small.jpg" alt="">
+                </div>
+                <div class="recipe_title_box" id="recipeTitleBox">
+                    <div class="open_space"></div>
+                    <h3 class="recipe_title" id="recipeTitle">Recipe</h3>
+                    <div class="open_space"></div>
+                </div>
+            </div>
+            <div class="recipe_text_box" id="recipeContentBox">
+                <h3 class="recipe_name" id="recipeName"></h3>
+                <p class="recipe_text" id="recipeText"></p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="navbar.js"></script>
+    
+</body>
+</html>

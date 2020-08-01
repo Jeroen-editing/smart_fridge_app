@@ -1,3 +1,12 @@
+!! Rebuilding this project.
+    - simplifying index page (starting for smartphone).
+    - adding responsiveness (starting for smartphone).
+    - making multipage for app-explanation and form.
+    - fixing the small JS bug.
+    ...
+    
+    In this order.
+
 # smart_fridge_app
 
 - Our Smartfridge will be making meals with the ingredients in your house!

@@ -155,27 +155,27 @@ body {
   border-bottom: 1px solid #037d7d;
   border-bottom-width: 3px; }
 
-.explain_info {
+.explain_header {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 100px;
   border-bottom: 1px solid #037d7d; }
-  .explain_info .explain_photo_box {
+  .explain_header .explain_photo_box {
     width: 30%;
     overflow: hidden;
     border-right: 1px solid #037d7d; }
-    .explain_info .explain_photo_box .explain_photo {
+    .explain_header .explain_photo_box .explain_photo {
       width: 100%; }
-  .explain_info .explain_title_box {
+  .explain_header .explain_title_box {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 70%; }
-    .explain_info .explain_title_box .open_space {
+    .explain_header .explain_title_box .open_space {
       height: 22%;
       background: rgba(148, 108, 59, 0.4); }
-    .explain_info .explain_title_box .explain_title {
+    .explain_header .explain_title_box .explain_title {
       padding: 8px 0 8px 22px;
       color: #054a6e;
       font-family: "Jura", sans-serif, sans-serif;

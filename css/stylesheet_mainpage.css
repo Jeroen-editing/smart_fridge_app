@@ -6,6 +6,7 @@ body {
   width: 100%; }
 
 /************ VARIABLES ********************************/
+/* for sass-file */
 /************ HEADER ********************************/
 .header_box {
   display: flex;
@@ -21,7 +22,7 @@ body {
   box-shadow: 0 2px 4px #505050;
   z-index: 1;
   /************ NAV BUTTON ********************************/
-  /************ WEB-NAME ********************************/ }
+  /************ WEBSITE NAME ********************************/ }
   .header_box .btn_box_visible,
   .header_box .webpage_name {
     display: flex;
@@ -136,7 +137,7 @@ body {
   position: relative;
   margin-top: 60px;
   padding: 4px 0;
-  background: rgba(148, 108, 59, 0.4);
+  background: rgba(148, 108, 59, 0.6);
   border-bottom: 1px solid #037d7d; }
   .search_box form {
     display: flex;
@@ -168,7 +169,7 @@ body {
   display: block;
   min-height: 11.5rem;
   position: relative;
-  background: rgba(255, 232, 116, 0.4);
+  background: rgba(255, 232, 116, 0.2);
   border-bottom: 1px solid #037d7d; }
 
 /************ FRIDGE & RECIPE BOX ***********************************/
@@ -177,9 +178,11 @@ body {
   /**************** recipe ****************/ }
   .selection_box .fridge_box {
     width: 100%;
-    background: rgba(255, 232, 116, 0.4); }
+    border-bottom: 1px solid #037d7d;
+    border-bottom-width: 3px; }
     .selection_box .fridge_box .fridge_content {
-      min-height: 11.5rem; }
+      min-height: 11.5rem;
+      background: rgba(255, 232, 116, 0.2); }
     .selection_box .fridge_box .chef_box {
       display: flex;
       flex-direction: column;
@@ -188,9 +191,8 @@ body {
       min-height: 50px;
       position: sticky;
       bottom: 0px;
-      background: rgba(148, 108, 59, 0.4);
-      border-top: 1px solid #037d7d;
-      border-bottom: 1px solid #037d7d; }
+      background: rgba(148, 108, 59, 0.6);
+      border-top: 1px solid #037d7d; }
       .selection_box .fridge_box .chef_box .chef_btn {
         display: block;
         height: 32px;
@@ -205,14 +207,14 @@ body {
         border-radius: 6px;
         box-shadow: 0 0 1px #505050; }
   .selection_box .recipe_box {
-    width: 100%; }
+    width: 100%;
+    border-bottom: 1px solid #037d7d;
+    border-bottom-width: 3px; }
     .selection_box .recipe_box .recipe_info {
       display: flex;
       flex-direction: row;
       width: auto;
-      height: 72px;
-      background: rgba(255, 232, 116, 0.4);
-      border-top: 1px solid #037d7d;
+      height: 100px;
       border-bottom: 1px solid #037d7d; }
       .selection_box .recipe_box .recipe_info .recipe_photo_box {
         width: 30%;
@@ -223,32 +225,42 @@ body {
       .selection_box .recipe_box .recipe_info .recipe_title_box {
         display: flex;
         flex-direction: column;
-        width: 64.75%; }
+        justify-content: space-between;
+        width: 70%; }
         .selection_box .recipe_box .recipe_info .recipe_title_box .open_space {
-          width: 100%;
-          height: 10%; }
+          height: 22%;
+          background: rgba(148, 108, 59, 0.4); }
         .selection_box .recipe_box .recipe_info .recipe_title_box .recipe_title {
-          min-width: 100%;
-          padding: 8px 0 8px 16px;
+          padding: 8px 0 8px 22px;
           color: #054a6e;
           font-family: "Jura", sans-serif, sans-serif;
           font-size: 32px;
           font-weight: 800;
-          letter-spacing: 2px;
           text-align: left;
           background-color: rgba(131, 153, 96, 0.8);
           border-top: 1px solid #037d7d;
           border-bottom: 1px solid #037d7d; }
     .selection_box .recipe_box .recipe_text_box {
       width: 100%;
-      height: 12.5rem;
-      border-bottom: 1px solid #037d7d; }
+      min-height: 12.5rem; }
       .selection_box .recipe_box .recipe_text_box .recipe_name {
         min-height: 2.5rem;
-        background: rgba(148, 108, 59, 0.4);
+        padding-top: 6px;
+        color: #054a6e;
+        font-family: "Jura", sans-serif;
+        font-size: 26px;
+        font-weight: 600;
+        text-align: center;
+        background: rgba(131, 153, 96, 0.48);
         border-bottom: 1px solid #037d7d; }
       .selection_box .recipe_box .recipe_text_box .recipe_text {
-        height: 10rem;
-        background: rgba(255, 232, 116, 0.4); }
+        min-height: 10rem;
+        padding: 12px 14px;
+        color: #585835;
+        font-family: "Catamaran", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+        background: rgba(255, 232, 116, 0.2); }
 
-/*# sourceMappingURL=stylesheet.css.map */
+/*# sourceMappingURL=stylesheet_mainpage.css.map */

@@ -3,9 +3,9 @@
 ###### In this order.
 
 - simplifying index page (starting for smartphone).
-- making multipage with separate app-explanation and form.
+- making articles dynamic with javascript.
 - adding responsiveness (starting for smartphone).
-- fixing some small JS bugs.
+- fixing some small Javascript (Ajax) bugs.
 
 ###### - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

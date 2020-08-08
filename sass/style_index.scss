@@ -5,20 +5,22 @@
 
 body {
     width: 100%;
+    animation: fadeIn 2s forwards;
 }
 
-/************ VARIABLES ********************************/
-/* for sass-file */
 
 $nav_bg: rgb(121, 37, 37);
 
-$dark_bg: rgb(148, 108, 59);
-$light_bg: rgb(255, 232, 116);
+$darkest_bg: rgb(148, 139, 114);
+$dark_bg: rgb(180, 171, 148);
+$light_bg: rgb(223, 221, 199);
 $borders: 1px solid rgb(3, 125, 125);
 
 $title_font: 'Jura', sans-serif;
 $title_color: rgb(5, 74, 110);
 $title_bg: rgb(131, 153, 96);
+
+$subtitle_border: 1px solid rgba(65, 109, 46, 0.2);
 
 $btn_font: 'Gruppo', cursive;
 $btn_text: rgb(26, 83, 35);
@@ -32,189 +34,35 @@ $hover_textcolor: rgb(255, 202, 87);
 $shadow: rgb(80, 80, 80);
 
 $text_font: 'Catamaran', sans-serif;
-$text_color: rgb(88, 88, 53);
+$text_color: rgb(71, 71, 46);
+$text_border: 1px solid rgba(148, 108, 59, 0.2);
 
 
-/************ HEADER ********************************/
+/************ MAIN PAGE ************************************/
+/***********************************************************/
 
-.header_box {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: fixed;
-    height: 60px;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: $title_bg;
-    border-bottom: $borders;
-    box-shadow: 0 2px 4px $shadow;
-    z-index: 1;
 
-    .btn_box_visible,
-    .webpage_name {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
+.main_box {
+
+    .background_one {
+        width: 100%;
+        background: url("../assets/img/bg.jpg") no-repeat center;
+        background-size: cover;
     }
-
-    /************ NAV BUTTON ********************************/
-
-    .btn_box_visible {
-        width: 14%;
-        .nav_show_btn {
-            width: 28px;
-            outline: none;
-            padding: 2px 2px 0 2px;
-            border: $btn_border;
-            border-radius: 4px;
-            background: $nav_bg;
-            box-shadow: 0 0 2px $shadow;
-
-            img {
-                height: 20px;
-            }
-            &:hover {
-                cursor: pointer;
-                background: rgba($hover_bg, 0.6);
-                border: $hover_border;
-                box-shadow: inset 0 0 2px $shadow;
-            }
-        }   
-    }
-    .btn_box_hidden {
-        display: none;
-    }
-
-    /************ WEBSITE NAME ********************************/
-
-    .webpage_name {       
-        width: 80%;
-
-        .title {
-            width: 100%;
-            color: $title_color;
-            font-family: $title_font, sans-serif;
-            font-weight: 900;
-            letter-spacing: 2px;
-            text-align: center;
-        }
+    .background_two {
+        width: 100%;
+        background: url("../assets/img/tomato.jpg") no-repeat bottom;
+        background-size: cover;
     }
 }
-
-/************ NAV ***********************************/
-
-.hidden_nav {
-    display: none;
-}
-.visible_nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    height: 60px;
-    top: 61px;
-    position: fixed;
-    background: $nav_bg;
-    box-shadow: 0 2px 4px $shadow;
-    z-index: 1;
-
-    .btn_box_visible {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-width: 14%;
-        height: 60px;
-        background: $nav_bg;
-
-        .nav_hide_btn {
-            width: 28px;
-            outline: none;
-            padding: 2px 2px 0 2px;
-            border: $btn_border;
-            border-radius: 4px;
-            background: $title_bg;
-            box-shadow: 0 0 2px $shadow;
-
-            img {
-                height: 20px;
-            }
-            &:hover {
-                cursor: pointer;
-                background: rgba($hover_bg, 0.6);
-                border: $hover_border;
-                box-shadow: inset 0 0 2px $shadow;
-            }
-        }   
-    }
-    .nav_box {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        width: 84%;
-
-        .navButton {
-            margin: 0 1px;
-            padding: 5px 5px;
-            background: $btn_bg;
-            border: $btn_border;
-            border-radius: 4px;
-            box-shadow: 0 0 2px $shadow;
-
-            a {
-                color: $btn_text;
-                font-family: $btn_font;
-                font-size: 14px;
-                font-weight: 600;
-                text-decoration: none;
-
-                img {
-                    height: 16px;
-                    margin-right: 4px;
-                }
-            }
-            &:hover {
-                cursor: pointer;
-                background: rgba($hover_bg, 0.6);
-                border: $hover_border;
-                box-shadow: inset 0 0 2px $shadow;
-                a {
-                    color: $hover_textcolor;
-                    text-shadow: 0 0 1px black;
-                }
-            }
-        }
-        #home {
-            padding: 3px 2px 1px 2px; 
-        }
-        .navBreak {
-            width: 4px;
-            height: 24px;
-            margin: 0 2px;
-            background: $title_bg;
-            border: none;
-            border-radius: 4px;
-        }
-    }
-    .btn_box_visible {
-        width: 30%;
-    }
-}
-
 /************ SEARCH BOX ***********************************/
 
 .search_box {
     display: block;
     height: 92px;
-    position: relative;
-    margin-top: 60px;
+    margin-top: 61px;
     padding: 4px 0;
-    background: rgba($dark_bg, 0.6);
+    background: $darkest_bg;
     border-bottom: $borders;
 
     form {
@@ -239,8 +87,9 @@ $text_color: rgb(88, 88, 53);
     }
     .ingredient_input {
         font-size: 18px;
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.8);
         box-shadow: inset 0 0 2px $shadow;
+        cursor: text;
     }
 
     .search_btn {
@@ -263,144 +112,482 @@ $text_color: rgb(88, 88, 53);
     display: block;
     min-height: 12rem;
     position: relative;
-    background: rgba($light_bg, 0.2);
+    background: rgba($light_bg, 0.7);
     border-bottom: $borders;
 }
 
 
 /************ FRIDGE & RECIPE BOX ***********************************/
 
-.selection_box {
+/**************** fridge ****************/
 
-    /**************** fridge ****************/
+.fridge_box{
+    width: 100%;
+    border-bottom: $borders;
+    border-bottom-width: 3px;
 
-    .fridge_box{
-        width: 100%;
-        border-bottom: $borders;
-        border-bottom-width: 3px;
+    .fridge_content {
+        min-height: 12rem;
+        background: rgba($light_bg, 0.7);
+    }
+    .chef_box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 50px;
+        position: sticky;
+        bottom: 0px;
+        background: $darkest_bg;
+        border-top: $borders;
 
-        .fridge_content {
-            min-height: 12rem;
-            background: rgba($light_bg, 0.2);
-        }
-        .chef_box {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 50px;
-            position: sticky;
-            bottom: 0px;
-            background: rgba($dark_bg, 0.6);
-            border-top: $borders;
+        .chef_btn {
+            display: block;
+            height: 32px;
+            width: 300px;
+            color: $btn_text;
+            font-family: $btn_font;
+            font-size: 24px;
+            font-weight: 900;
+            text-align: center;
+            background: rgba($btn_bg, 0.6);
+            border: $btn_border;
+            border-radius: 6px;
+            box-shadow: 0 0 1px $shadow;
 
-            .chef_btn {
-                display: block;
-                height: 32px;
-                width: 300px;
-                color: $btn_text;
-                font-family: $btn_font;
-                font-size: 24px;
-                font-weight: 900;
-                text-align: center;
-                background: rgba($btn_bg, 0.6);
-                border: $btn_border;
-                border-radius: 6px;
-                box-shadow: 0 0 1px $shadow;
-
-                &:hover {
-                    cursor: pointer;
-                    color: $hover_textcolor;
-                    text-shadow: 0 0 2px black;
-                    background: rgba($hover_bg, 0.6);
-                    border: $hover_border;
-                    box-shadow: inset 0 0 2px $shadow;
-                }
+            &:hover {
+                cursor: pointer;
+                color: $hover_textcolor;
+                text-shadow: 0 0 2px black;
+                background: rgba($hover_bg, 0.6);
+                border: $hover_border;
+                box-shadow: inset 0 0 2px $shadow;
             }
-        }     
-    }
+        }
+    }     
+}
     
-    /**************** recipe ****************/
+    
+/**************** recipe ****************/
 
-    .recipe_box {
-        width: 100%;
-        border-bottom: $borders;
-        border-bottom-width: 3px;
-    }
+.recipe_box,
+.popup_box {
+    overflow: hidden;
+    overflow-y: scroll;
+    background: $light_bg;
+    cursor: default;
+}
+
+.recipe_box {
+    width: 100%;
+    background: $light_bg; 
+    border-bottom: $borders;
+    border-bottom-width: 3px;
+}
+
+.popup_box {
+    width: 90%;
+    margin: 10px auto;
+    border: $borders;
+    border-width: 3px;
+    border-radius: 6px;
+    animation: scaleIn 1.5s forwards;
+}
         
-    .recipe_header {
+.article_header {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 68px;
+    border-bottom: $borders;
+            
+    .photo_box {
+        width: 36%;
+        overflow: hidden;
+        border-right: $borders;
+        border-right-width: 2px;
+
+        .photo {
+            width: 100%;
+        }
+    }
+    .title_box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 70%;
+        background: $dark_bg;
+                
+        .open_space {
+            height: 24%;
+            background: $dark_bg;
+        }
+
+        .article_title {
+            padding: 4px 0 4px 14px;
+            color: $title_color;
+            font-family: $title_font, sans-serif;
+            font-size: 20px;
+            font-weight: 800;
+            text-align: left;
+            background-color: rgba($title_bg, 0.8);
+            border-top: $borders;
+            border-bottom: $borders;
+        }
+    }    
+}
+
+.text_box,
+.popup_text_box {
+    width: auto;
+    padding: 0px 12px 12px 12px;
+    overflow-y: scroll;
+        
+    .text_title,
+    .form_label {
+        min-height: 1.4rem;
+        min-width: 200px;
+        margin-top: 12px;
+        padding: 4px 0 2px 8px;
+        color: $title_color;
+        font-family: $title_font;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: left;
+        background: rgba($title_bg, 0.44);
+        border: $subtitle_border;        
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    .paragraph,
+    .text,
+    .form_input,
+    .form_message {
+        margin-bottom: 8px;
+        padding: 8px  8px 6px 8px;
+        color: rgb(36, 54, 17);
+        color: $text_color;
+        font-family: $text_font;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-align: left;
+        line-height: 20px;
+        background: rgba($dark_bg, 0.2);
+        border: $text_border;
+        border-top: none;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+
+        .breakline {
+            display: block;
+            margin-top: 8px;
+            border-bottom: 1px solid $darkest_bg;
+        }
+
+        span {
+            margin-right: 4px;
+            color: $title_color;
+            font-size: 17px;
+            font-weight: 500;
+        }
+    }
+
+    .explain_text {
+        margin: 4px auto;
+        padding: 6px 0 16px 0;
+        width: 96%;
+        background: none;
+        border: none;
+        border-bottom: 1px solid $dark_bg;
+        border-radius: 0px;
+    }
+    .paragraph {
+        .first {
+            margin-top: -2px;
+        }
+        .last {
+            padding-bottom: 6px;
+            border-bottom: none; 
+        }
+    }
+}
+
+.contact_form {
+    max-height: 440px;
+    overflow-y: scroll;
+    padding: 0 12px;
+
+    .form_field_one,
+    .form_field_two {
+        border: none;
+    }
+    .form_label,
+    .form_input,
+    .form_message {
+        display: block;
+        padding-right: 0;
+        width: 98%;
+    }
+    .form_input,
+    .form_message {
+        &::-webkit-input-placeholder {
+            color: rgba($text_color, 0.6);
+            font-weight: 100;
+        } 
+        &:-ms-input-placeholder {
+            color: rgba($text_color, 0.6);
+            font-weight: 100;
+        }       
+        &::placeholder {
+            color: rgba($text_color, 0.6);
+            font-weight: 100;
+        }
+        cursor: text;
+    }
+    .form_input {
+        height: 24px;
+    }
+    .form_message {
+        padding-bottom: 0px;
+    }
+    .open_space {
+        width: 100%;
+        height: 1px;
+        margin: 14px 0 4px 0;
+        background: rgb(3, 125, 125);
+    }
+    .form_btn {
+        display: block;
+        height: 26px;
+        margin-top: 12px;
+        padding: 2px 6px;
+        color: $btn_text;
+        font-family: $btn_font;
+        font-size: 20px;
+        font-weight: 900;
+        text-align: center;
+        background: $btn_bg;
+        border: 1px solid rgba(12, 107, 107, 0.2);
+        border-radius: 6px;
+
+        &:hover {
+            cursor: pointer;
+            color: $hover_textcolor;
+            text-shadow: 0 0 2px black;
+            background: $hover_bg;
+            box-shadow: inset 0 0 1px $shadow;
+        } 
+    }
+}
+
+.contact_footer {
+    width: 100%;
+    height: 36px;
+    background: green;
+    border-top: $borders;
+    border-top-width: 4px;
+
+    .window_btn {
         display: flex;
         flex-direction: row;
-        width: auto;
-        height: 100px;
-        border-bottom: $borders;
-            
-        .recipe_photo_box {
-            width: 30%;
-            overflow: hidden;
-            border-right: $borders;
+        justify-content: center;
+        width: 100%;
+        height: 36px;
+        padding-top: 4px;
+        background: $btn_bg;
+        border: 1px solid $btn_bg;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
 
-            .recipe_photo {
-                width: 100%;
-            }
+        p {
+            color: $btn_text;
+            font-family: $btn_font;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            word-spacing: 4px;
         }
-        .recipe_title_box {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 70%;
-                
-            .open_space {
-                height: 22%;
-                background: rgba($dark_bg, 0.4);
-            }
 
-            .recipe_title {
-                padding: 8px 0 8px 22px;
-                color: $title_color;
-                font-family: $title_font, sans-serif;
-                font-size: 32px;
-                font-weight: 800;
-                text-align: left;
-                background-color: rgba($title_bg, 0.8);
-                border-top: $borders;
-                border-bottom: $borders;
-            }
+        span {
+            margin: 2px 16px 0 16px;
+            color: $title_color;
+            font-size: 22px;
+            line-height: 16px;
+        }
 
+        &:hover {
+            cursor: pointer;
+            background: $hover_bg;
+            border: 1px solid rgba($nav_bg, 0.2);
+
+            span {
+                color: $nav_bg;
+            }
+            p {
+                color: $hover_textcolor;
+                text-shadow: 0 0 2px black;
+            }
         }
     }
-    .recipe_text_box {
-        width: auto;
-        min-height: 12.5rem;
-        padding: 8px 12px 8px 12px;
-        background: rgba($light_bg, 0.2);
-            
-        .recipe_name {
-            min-height: 1.4rem;
-            min-width: 200px;
-            margin-top: 12px;
-            padding: 4px 0 2px 8px;
-            color: $title_color;
-            font-family: $title_font;
-            font-size: 24px;
-            font-weight: 600;
-            text-align: left;
-            background: rgba($title_bg, 0.4);
-            border: $borders;
-            border-radius: 6px;
+}
+
+.about_hidden,
+.recipe_hidden,
+.explain_hidden,
+.contact_hidden {
+    display: none;
+}
+
+.about_visible,
+.recipe_visible,
+.explain_visible,
+.contact_visible {
+    display: block;
+    height: 58.3rem;
+    margin: 0 auto;
+    padding: 0 8px;
+    position: absolute;
+    background: rgba(0,0,0,0.88);
+    z-index: 2;
+
+    h3 {
+        padding-top: 10px;
+        color: white;
+        font-family: $btn_font;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        animation: fadeIn 2s forwards;
+    }
+    .copyBox {
+        width: 84%;
+        margin: -6px auto;
+        position: relative;
+        cursor: default;
+        animation: fadeIn 2s forwards;
+
+        .our_brand {
+            padding-bottom: 4px;
+            color: rgb(109, 109, 67);
+            font-family: $btn_font;
+            font-size: 20px;
+            font-weight: 400;
+            text-align: center;
+            border-bottom: 1px solid $text_color;
+
+            span {
+                margin: 0 4px;
+                font-size: 16px;
+                font-weight: 500;
+            }
+            .name {
+                color: rgb(19, 108, 156);
+                font-size: 22px;
+                font-weight: 700;
+            }
         }
-        .recipe_text {
-            margin: 6px 0;
-            padding: 4px 8px;
-            color: $text_color;
-            font-family: $text_font;
-            font-size: 15px;
+
+        h4 {    
+            margin-top: 4px;   
+            color: white;
+            font-family: $btn_font;
+            font-size: 16px;
             font-weight: 300;
-            text-align: left;
-            line-height: 22px;
-            background: rgba($dark_bg, 0.1);
-            border: $borders;
-            border-radius: 6px;
+            letter-spacing: 1px;
+            text-align: center;   
         }
-    }  
+    }
+}
+
+.rights {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 6px 0;
+    background: $dark_bg;
+    cursor: default;
+
+    .left_footer {
+        margin-left: 6px;
+        p {
+            display: block;
+            margin: 0 auto;
+            color: rgb(61, 61, 37);
+            font-family: $text_font;
+            font-size: 12px;
+            font-weight: 100;
+            text-align: right;
+            line-height: 16px;
+    
+            span {
+                color: rgb(24, 83, 52);
+                font-family: $title_font;
+                font-weight: 500;
+            } 
+        }
+    }
+    .right_footer {
+        margin-right: 6px;
+        a {
+            text-decoration: none;
+
+            .link {
+                height: 20px;
+                width: 20px;
+                margin-right: 4px;
+                font-weight: 600;
+                border: none;
+
+                .linkImg {
+                    height: 18px;
+                    width: 18px;
+                    background: rgb(202, 202, 202);
+                    border: 1px solid rgb(202, 202, 202);
+                }
+
+                &:hover {
+                    animation: scaleText 2s;
+                    color: $hover_textcolor;
+                    border: $hover_border;
+                    cursor: pointer;
+                }
+            }
+            .github {
+                margin-left: 12px;
+            } 
+        } 
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(86%);
+    }
+    to {
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+
+@keyframes scaleText {
+    0% {
+        transform: scaleX(100%) scaleY(100%);
+    }
+    50% {
+        transform: scaleX(110%) scaleY(120%);
+    }
+    100% {
+        transform: scaleX(100%) scaleY(100%);
+    }
 }

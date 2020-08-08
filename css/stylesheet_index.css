@@ -3,151 +3,27 @@
   padding: 0; }
 
 body {
-  width: 100%; }
-
-/************ VARIABLES ********************************/
-/* for sass-file */
-/************ HEADER ********************************/
-.header_box {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: fixed;
-  height: 60px;
   width: 100%;
-  top: 0;
-  left: 0;
-  background-color: #839960;
-  border-bottom: 1px solid #037d7d;
-  box-shadow: 0 2px 4px #505050;
-  z-index: 1;
-  /************ NAV BUTTON ********************************/
-  /************ WEBSITE NAME ********************************/ }
-  .header_box .btn_box_visible,
-  .header_box .webpage_name {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%; }
-  .header_box .btn_box_visible {
-    width: 14%; }
-    .header_box .btn_box_visible .nav_show_btn {
-      width: 28px;
-      outline: none;
-      padding: 2px 2px 0 2px;
-      border: 1px solid #0c6b6b;
-      border-radius: 4px;
-      background: #792525;
-      box-shadow: 0 0 2px #505050; }
-      .header_box .btn_box_visible .nav_show_btn img {
-        height: 20px; }
-      .header_box .btn_box_visible .nav_show_btn:hover {
-        cursor: pointer;
-        background: rgba(31, 148, 221, 0.6);
-        border: 1px solid #ffca57;
-        box-shadow: inset 0 0 2px #505050; }
-  .header_box .btn_box_hidden {
-    display: none; }
-  .header_box .webpage_name {
-    width: 80%; }
-    .header_box .webpage_name .title {
-      width: 100%;
-      color: #054a6e;
-      font-family: "Jura", sans-serif, sans-serif;
-      font-weight: 900;
-      letter-spacing: 2px;
-      text-align: center; }
+  animation: fadeIn 2s forwards; }
 
-/************ NAV ***********************************/
-.hidden_nav {
-  display: none; }
-
-.visible_nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+/************ MAIN PAGE ************************************/
+/***********************************************************/
+.main_box .background_one {
   width: 100%;
-  height: 60px;
-  top: 61px;
-  position: fixed;
-  background: #792525;
-  box-shadow: 0 2px 4px #505050;
-  z-index: 1; }
-  .visible_nav .btn_box_visible {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 14%;
-    height: 60px;
-    background: #792525; }
-    .visible_nav .btn_box_visible .nav_hide_btn {
-      width: 28px;
-      outline: none;
-      padding: 2px 2px 0 2px;
-      border: 1px solid #0c6b6b;
-      border-radius: 4px;
-      background: #839960;
-      box-shadow: 0 0 2px #505050; }
-      .visible_nav .btn_box_visible .nav_hide_btn img {
-        height: 20px; }
-      .visible_nav .btn_box_visible .nav_hide_btn:hover {
-        cursor: pointer;
-        background: rgba(31, 148, 221, 0.6);
-        border: 1px solid #ffca57;
-        box-shadow: inset 0 0 2px #505050; }
-  .visible_nav .nav_box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 84%; }
-    .visible_nav .nav_box .navButton {
-      margin: 0 1px;
-      padding: 5px 5px;
-      background: #ffca57;
-      border: 1px solid #0c6b6b;
-      border-radius: 4px;
-      box-shadow: 0 0 2px #505050; }
-      .visible_nav .nav_box .navButton a {
-        color: #1a5323;
-        font-family: "Gruppo", cursive;
-        font-size: 14px;
-        font-weight: 600;
-        text-decoration: none; }
-        .visible_nav .nav_box .navButton a img {
-          height: 16px;
-          margin-right: 4px; }
-      .visible_nav .nav_box .navButton:hover {
-        cursor: pointer;
-        background: rgba(31, 148, 221, 0.6);
-        border: 1px solid #ffca57;
-        box-shadow: inset 0 0 2px #505050; }
-        .visible_nav .nav_box .navButton:hover a {
-          color: #ffca57;
-          text-shadow: 0 0 1px black; }
-    .visible_nav .nav_box #home {
-      padding: 3px 2px 1px 2px; }
-    .visible_nav .nav_box .navBreak {
-      width: 4px;
-      height: 24px;
-      margin: 0 2px;
-      background: #839960;
-      border: none;
-      border-radius: 4px; }
-  .visible_nav .btn_box_visible {
-    width: 30%; }
+  background: url("../assets/img/bg.jpg") no-repeat center;
+  background-size: cover; }
+.main_box .background_two {
+  width: 100%;
+  background: url("../assets/img/tomato.jpg") no-repeat bottom;
+  background-size: cover; }
 
 /************ SEARCH BOX ***********************************/
 .search_box {
   display: block;
   height: 92px;
-  position: relative;
-  margin-top: 60px;
+  margin-top: 61px;
   padding: 4px 0;
-  background: rgba(148, 108, 59, 0.6);
+  background: #948b72;
   border-bottom: 1px solid #037d7d; }
   .search_box form {
     display: flex;
@@ -168,8 +44,9 @@ body {
     border-radius: 6px; }
   .search_box .ingredient_input {
     font-size: 18px;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: inset 0 0 2px #505050; }
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 0 2px #505050;
+    cursor: text; }
   .search_box .search_btn {
     font-size: 24px;
     background: rgba(255, 202, 87, 0.6);
@@ -186,113 +63,422 @@ body {
   display: block;
   min-height: 12rem;
   position: relative;
-  background: rgba(255, 232, 116, 0.2);
+  background: rgba(223, 221, 199, 0.7);
   border-bottom: 1px solid #037d7d; }
 
 /************ FRIDGE & RECIPE BOX ***********************************/
-.selection_box {
-  /**************** fridge ****************/
-  /**************** recipe ****************/ }
-  .selection_box .fridge_box {
+/**************** fridge ****************/
+.fridge_box {
+  width: 100%;
+  border-bottom: 1px solid #037d7d;
+  border-bottom-width: 3px; }
+  .fridge_box .fridge_content {
+    min-height: 12rem;
+    background: rgba(223, 221, 199, 0.7); }
+  .fridge_box .chef_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    position: sticky;
+    bottom: 0px;
+    background: #948b72;
+    border-top: 1px solid #037d7d; }
+    .fridge_box .chef_box .chef_btn {
+      display: block;
+      height: 32px;
+      width: 300px;
+      color: #1a5323;
+      font-family: "Gruppo", cursive;
+      font-size: 24px;
+      font-weight: 900;
+      text-align: center;
+      background: rgba(255, 202, 87, 0.6);
+      border: 1px solid #0c6b6b;
+      border-radius: 6px;
+      box-shadow: 0 0 1px #505050; }
+      .fridge_box .chef_box .chef_btn:hover {
+        cursor: pointer;
+        color: #ffca57;
+        text-shadow: 0 0 2px black;
+        background: rgba(31, 148, 221, 0.6);
+        border: 1px solid #ffca57;
+        box-shadow: inset 0 0 2px #505050; }
+
+/**************** recipe ****************/
+.recipe_box,
+.popup_box {
+  overflow: hidden;
+  overflow-y: scroll;
+  background: #dfddc7;
+  cursor: default; }
+
+.recipe_box {
+  width: 100%;
+  background: #dfddc7;
+  border-bottom: 1px solid #037d7d;
+  border-bottom-width: 3px; }
+
+.popup_box {
+  width: 90%;
+  margin: 10px auto;
+  border: 1px solid #037d7d;
+  border-width: 3px;
+  border-radius: 6px;
+  animation: scaleIn 1.5s forwards; }
+
+.article_header {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 68px;
+  border-bottom: 1px solid #037d7d; }
+  .article_header .photo_box {
+    width: 36%;
+    overflow: hidden;
+    border-right: 1px solid #037d7d;
+    border-right-width: 2px; }
+    .article_header .photo_box .photo {
+      width: 100%; }
+  .article_header .title_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    background: #b4ab94; }
+    .article_header .title_box .open_space {
+      height: 24%;
+      background: #b4ab94; }
+    .article_header .title_box .article_title {
+      padding: 4px 0 4px 14px;
+      color: #054a6e;
+      font-family: "Jura", sans-serif, sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      text-align: left;
+      background-color: rgba(131, 153, 96, 0.8);
+      border-top: 1px solid #037d7d;
+      border-bottom: 1px solid #037d7d; }
+
+.text_box,
+.popup_text_box {
+  width: auto;
+  padding: 0px 12px 12px 12px;
+  overflow-y: scroll; }
+  .text_box .text_title,
+  .text_box .form_label,
+  .popup_text_box .text_title,
+  .popup_text_box .form_label {
+    min-height: 1.4rem;
+    min-width: 200px;
+    margin-top: 12px;
+    padding: 4px 0 2px 8px;
+    color: #054a6e;
+    font-family: "Jura", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+    background: rgba(131, 153, 96, 0.44);
+    border: 1px solid rgba(65, 109, 46, 0.2);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px; }
+  .text_box .paragraph,
+  .text_box .text,
+  .text_box .form_input,
+  .text_box .form_message,
+  .popup_text_box .paragraph,
+  .popup_text_box .text,
+  .popup_text_box .form_input,
+  .popup_text_box .form_message {
+    margin-bottom: 8px;
+    padding: 8px  8px 6px 8px;
+    color: #243611;
+    color: #47472e;
+    font-family: "Catamaran", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: left;
+    line-height: 20px;
+    background: rgba(180, 171, 148, 0.2);
+    border: 1px solid rgba(148, 108, 59, 0.2);
+    border-top: none;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px; }
+    .text_box .paragraph .breakline,
+    .text_box .text .breakline,
+    .text_box .form_input .breakline,
+    .text_box .form_message .breakline,
+    .popup_text_box .paragraph .breakline,
+    .popup_text_box .text .breakline,
+    .popup_text_box .form_input .breakline,
+    .popup_text_box .form_message .breakline {
+      display: block;
+      margin-top: 8px;
+      border-bottom: 1px solid #948b72; }
+    .text_box .paragraph span,
+    .text_box .text span,
+    .text_box .form_input span,
+    .text_box .form_message span,
+    .popup_text_box .paragraph span,
+    .popup_text_box .text span,
+    .popup_text_box .form_input span,
+    .popup_text_box .form_message span {
+      margin-right: 4px;
+      color: #054a6e;
+      font-size: 17px;
+      font-weight: 500; }
+  .text_box .explain_text,
+  .popup_text_box .explain_text {
+    margin: 4px auto;
+    padding: 6px 0 16px 0;
+    width: 96%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #b4ab94;
+    border-radius: 0px; }
+  .text_box .paragraph .first,
+  .popup_text_box .paragraph .first {
+    margin-top: -2px; }
+  .text_box .paragraph .last,
+  .popup_text_box .paragraph .last {
+    padding-bottom: 6px;
+    border-bottom: none; }
+
+.contact_form {
+  max-height: 440px;
+  overflow-y: scroll;
+  padding: 0 12px; }
+  .contact_form .form_field_one,
+  .contact_form .form_field_two {
+    border: none; }
+  .contact_form .form_label,
+  .contact_form .form_input,
+  .contact_form .form_message {
+    display: block;
+    padding-right: 0;
+    width: 98%; }
+  .contact_form .form_input,
+  .contact_form .form_message {
+    cursor: text; }
+    .contact_form .form_input::-webkit-input-placeholder,
+    .contact_form .form_message::-webkit-input-placeholder {
+      color: rgba(71, 71, 46, 0.6);
+      font-weight: 100; }
+    .contact_form .form_input:-ms-input-placeholder,
+    .contact_form .form_message:-ms-input-placeholder {
+      color: rgba(71, 71, 46, 0.6);
+      font-weight: 100; }
+    .contact_form .form_input::placeholder,
+    .contact_form .form_message::placeholder {
+      color: rgba(71, 71, 46, 0.6);
+      font-weight: 100; }
+  .contact_form .form_input {
+    height: 24px; }
+  .contact_form .form_message {
+    padding-bottom: 0px; }
+  .contact_form .open_space {
     width: 100%;
-    border-bottom: 1px solid #037d7d;
-    border-bottom-width: 3px; }
-    .selection_box .fridge_box .fridge_content {
-      min-height: 12rem;
-      background: rgba(255, 232, 116, 0.2); }
-    .selection_box .fridge_box .chef_box {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 50px;
-      position: sticky;
-      bottom: 0px;
-      background: rgba(148, 108, 59, 0.6);
-      border-top: 1px solid #037d7d; }
-      .selection_box .fridge_box .chef_box .chef_btn {
-        display: block;
-        height: 32px;
-        width: 300px;
-        color: #1a5323;
-        font-family: "Gruppo", cursive;
-        font-size: 24px;
-        font-weight: 900;
-        text-align: center;
-        background: rgba(255, 202, 87, 0.6);
-        border: 1px solid #0c6b6b;
-        border-radius: 6px;
-        box-shadow: 0 0 1px #505050; }
-        .selection_box .fridge_box .chef_box .chef_btn:hover {
-          cursor: pointer;
-          color: #ffca57;
-          text-shadow: 0 0 2px black;
-          background: rgba(31, 148, 221, 0.6);
-          border: 1px solid #ffca57;
-          box-shadow: inset 0 0 2px #505050; }
-  .selection_box .recipe_box {
-    width: 100%;
-    border-bottom: 1px solid #037d7d;
-    border-bottom-width: 3px; }
-  .selection_box .recipe_header {
+    height: 1px;
+    margin: 14px 0 4px 0;
+    background: #037d7d; }
+  .contact_form .form_btn {
+    display: block;
+    height: 26px;
+    margin-top: 12px;
+    padding: 2px 6px;
+    color: #1a5323;
+    font-family: "Gruppo", cursive;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+    background: #ffca57;
+    border: 1px solid rgba(12, 107, 107, 0.2);
+    border-radius: 6px; }
+    .contact_form .form_btn:hover {
+      cursor: pointer;
+      color: #ffca57;
+      text-shadow: 0 0 2px black;
+      background: #1f94dd;
+      box-shadow: inset 0 0 1px #505050; }
+
+.contact_footer {
+  width: 100%;
+  height: 36px;
+  background: green;
+  border-top: 1px solid #037d7d;
+  border-top-width: 4px; }
+  .contact_footer .window_btn {
     display: flex;
     flex-direction: row;
-    width: auto;
-    height: 100px;
-    border-bottom: 1px solid #037d7d; }
-    .selection_box .recipe_header .recipe_photo_box {
-      width: 30%;
-      overflow: hidden;
-      border-right: 1px solid #037d7d; }
-      .selection_box .recipe_header .recipe_photo_box .recipe_photo {
-        width: 100%; }
-    .selection_box .recipe_header .recipe_title_box {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 70%; }
-      .selection_box .recipe_header .recipe_title_box .open_space {
-        height: 22%;
-        background: rgba(148, 108, 59, 0.4); }
-      .selection_box .recipe_header .recipe_title_box .recipe_title {
-        padding: 8px 0 8px 22px;
-        color: #054a6e;
-        font-family: "Jura", sans-serif, sans-serif;
-        font-size: 32px;
-        font-weight: 800;
-        text-align: left;
-        background-color: rgba(131, 153, 96, 0.8);
-        border-top: 1px solid #037d7d;
-        border-bottom: 1px solid #037d7d; }
-  .selection_box .recipe_text_box {
-    width: auto;
-    min-height: 12.5rem;
-    padding: 8px 12px 8px 12px;
-    background: rgba(255, 232, 116, 0.2); }
-    .selection_box .recipe_text_box .recipe_name {
-      min-height: 1.4rem;
-      min-width: 200px;
-      margin-top: 12px;
-      padding: 4px 0 2px 8px;
+    justify-content: center;
+    width: 100%;
+    height: 36px;
+    padding-top: 4px;
+    background: #ffca57;
+    border: 1px solid #ffca57;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px; }
+    .contact_footer .window_btn p {
+      color: #1a5323;
+      font-family: "Gruppo", cursive;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      word-spacing: 4px; }
+    .contact_footer .window_btn span {
+      margin: 2px 16px 0 16px;
       color: #054a6e;
-      font-family: "Jura", sans-serif;
-      font-size: 24px;
-      font-weight: 600;
-      text-align: left;
-      background: rgba(131, 153, 96, 0.4);
-      border: 1px solid #037d7d;
-      border-radius: 6px; }
-    .selection_box .recipe_text_box .recipe_text {
-      margin: 6px 0;
-      padding: 4px 8px;
-      color: #585835;
-      font-family: "Catamaran", sans-serif;
-      font-size: 15px;
+      font-size: 22px;
+      line-height: 16px; }
+    .contact_footer .window_btn:hover {
+      cursor: pointer;
+      background: #1f94dd;
+      border: 1px solid rgba(121, 37, 37, 0.2); }
+      .contact_footer .window_btn:hover span {
+        color: #792525; }
+      .contact_footer .window_btn:hover p {
+        color: #ffca57;
+        text-shadow: 0 0 2px black; }
+
+.about_hidden,
+.recipe_hidden,
+.explain_hidden,
+.contact_hidden {
+  display: none; }
+
+.about_visible,
+.recipe_visible,
+.explain_visible,
+.contact_visible {
+  display: block;
+  height: 58.3rem;
+  margin: 0 auto;
+  padding: 0 8px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 2; }
+  .about_visible h3,
+  .recipe_visible h3,
+  .explain_visible h3,
+  .contact_visible h3 {
+    padding-top: 10px;
+    color: white;
+    font-family: "Gruppo", cursive;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    animation: fadeIn 2s forwards; }
+  .about_visible .copyBox,
+  .recipe_visible .copyBox,
+  .explain_visible .copyBox,
+  .contact_visible .copyBox {
+    width: 84%;
+    margin: -6px auto;
+    position: relative;
+    cursor: default;
+    animation: fadeIn 2s forwards; }
+    .about_visible .copyBox .our_brand,
+    .recipe_visible .copyBox .our_brand,
+    .explain_visible .copyBox .our_brand,
+    .contact_visible .copyBox .our_brand {
+      padding-bottom: 4px;
+      color: #6d6d43;
+      font-family: "Gruppo", cursive;
+      font-size: 20px;
+      font-weight: 400;
+      text-align: center;
+      border-bottom: 1px solid #47472e; }
+      .about_visible .copyBox .our_brand span,
+      .recipe_visible .copyBox .our_brand span,
+      .explain_visible .copyBox .our_brand span,
+      .contact_visible .copyBox .our_brand span {
+        margin: 0 4px;
+        font-size: 16px;
+        font-weight: 500; }
+      .about_visible .copyBox .our_brand .name,
+      .recipe_visible .copyBox .our_brand .name,
+      .explain_visible .copyBox .our_brand .name,
+      .contact_visible .copyBox .our_brand .name {
+        color: #136c9c;
+        font-size: 22px;
+        font-weight: 700; }
+    .about_visible .copyBox h4,
+    .recipe_visible .copyBox h4,
+    .explain_visible .copyBox h4,
+    .contact_visible .copyBox h4 {
+      margin-top: 4px;
+      color: white;
+      font-family: "Gruppo", cursive;
+      font-size: 16px;
       font-weight: 300;
-      text-align: left;
-      line-height: 22px;
-      background: rgba(148, 108, 59, 0.1);
-      border: 1px solid #037d7d;
-      border-radius: 6px; }
+      letter-spacing: 1px;
+      text-align: center; }
+
+.rights {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 6px 0;
+  background: #b4ab94;
+  cursor: default; }
+  .rights .left_footer {
+    margin-left: 6px; }
+    .rights .left_footer p {
+      display: block;
+      margin: 0 auto;
+      color: #3d3d25;
+      font-family: "Catamaran", sans-serif;
+      font-size: 12px;
+      font-weight: 100;
+      text-align: right;
+      line-height: 16px; }
+      .rights .left_footer p span {
+        color: #185334;
+        font-family: "Jura", sans-serif;
+        font-weight: 500; }
+  .rights .right_footer {
+    margin-right: 6px; }
+    .rights .right_footer a {
+      text-decoration: none; }
+      .rights .right_footer a .link {
+        height: 20px;
+        width: 20px;
+        margin-right: 4px;
+        font-weight: 600;
+        border: none; }
+        .rights .right_footer a .link .linkImg {
+          height: 18px;
+          width: 18px;
+          background: #cacaca;
+          border: 1px solid #cacaca; }
+        .rights .right_footer a .link:hover {
+          animation: scaleText 2s;
+          color: #ffca57;
+          border: 1px solid #ffca57;
+          cursor: pointer; }
+      .rights .right_footer a .github {
+        margin-left: 12px; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(86%); }
+  to {
+    opacity: 1;
+    transform: scale(100%); } }
+@keyframes scaleText {
+  0% {
+    transform: scaleX(100%) scaleY(100%); }
+  50% {
+    transform: scaleX(110%) scaleY(120%); }
+  100% {
+    transform: scaleX(100%) scaleY(100%); } }
 
 /*# sourceMappingURL=stylesheet_index.css.map */

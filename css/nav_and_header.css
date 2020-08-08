@@ -1,0 +1,332 @@
+/************ NAV and HEADER *******************************/
+/***********************************************************/
+/************ NAV ******************************************/
+.hidden_nav {
+  display: none; }
+
+.visible_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  position: fixed;
+  background: #792525;
+  border-bottom: 1px solid #037d7d;
+  box-shadow: inset 0 -2px 4px #505050;
+  cursor: default;
+  z-index: 6;
+  /************ Hide NAV Button ******************************/
+  /************ NAV Links ************************************/ }
+  .visible_nav .btn_box_visible {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background: #792525;
+    z-index: 6; }
+    .visible_nav .btn_box_visible .nav_hide_btn {
+      display: block;
+      width: 26px;
+      height: 26px;
+      outline: none;
+      border: 1px solid #0c6b6b;
+      border-radius: 4px;
+      background: #839960;
+      box-shadow: 0 0 2px #505050;
+      /*********** NAV-hide TOOLTIP ********************************/ }
+      .visible_nav .btn_box_visible .nav_hide_btn .bg_img {
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: relative;
+        background-image: url("../assets/icon/arrow_up_red_icon.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        border: none;
+        border-radius: 4px; }
+      .visible_nav .btn_box_visible .nav_hide_btn .hide_nav_tooltip {
+        visibility: hidden;
+        width: 130px;
+        top: 56px;
+        left: 10px;
+        padding: 4px 8px;
+        position: absolute;
+        background: #e2dcb8;
+        border: 1px solid rgba(148, 108, 59, 0.8);
+        border-radius: 6px;
+        z-index: 8; }
+        .visible_nav .btn_box_visible .nav_hide_btn .hide_nav_tooltip .arrow_left {
+          position: absolute;
+          width: 22px;
+          height: 22px;
+          left: 18px;
+          background: #e2dcb8;
+          border-left: 1px solid rgba(148, 108, 59, 0.8);
+          border-top: 1px solid rgba(148, 108, 59, 0.8);
+          z-index: 8;
+          transform: translateY(-70%) rotate(45deg); }
+        .visible_nav .btn_box_visible .nav_hide_btn .hide_nav_tooltip p {
+          font-family: "Catamaran", sans-serif;
+          letter-spacing: 1px;
+          padding-top: 4px;
+          color: #47472e;
+          font-size: 17px;
+          font-weight: 500;
+          text-align: center; }
+          .visible_nav .btn_box_visible .nav_hide_btn .hide_nav_tooltip p span {
+            margin-right: 6px;
+            color: #054a6e;
+            font-size: 17px;
+            font-weight: 500; }
+      .visible_nav .btn_box_visible .nav_hide_btn:hover {
+        cursor: pointer;
+        background: rgba(31, 148, 221, 0.6);
+        border: 1px solid #ffca57;
+        box-shadow: inset 0 0 2px #505050; }
+        .visible_nav .btn_box_visible .nav_hide_btn:hover .bg_img {
+          background-image: url("../assets/icon/arrow_up_yellow_icon.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          animation: rotateY 1s; }
+        .visible_nav .btn_box_visible .nav_hide_btn:hover .hide_nav_tooltip {
+          visibility: visible; }
+  .visible_nav .nav_btn_box .navButton {
+    padding: 4px 4px 5px 4px;
+    color: #792525;
+    font-family: "Gruppo", cursive;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    background: #839960;
+    border: 1px solid #0c6b6b;
+    border-radius: 4px;
+    box-shadow: 0 0 2px #505050; }
+    .visible_nav .nav_btn_box .navButton:hover {
+      cursor: pointer;
+      background: rgba(31, 148, 221, 0.6);
+      border: 1px solid #ffca57;
+      box-shadow: inset 0 0 2px #505050;
+      text-shadow: 0 0 1px black; }
+      .visible_nav .nav_btn_box .navButton:hover p {
+        color: #ffca57;
+        animation: ease scaleAndTranslate 500ms; }
+  .visible_nav .nav_btn_box #home {
+    padding: 3px 2px 1px 2px; }
+
+/************ HEADER ***************************************/
+.header_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #839960;
+  border-bottom: 1px solid #037d7d;
+  box-shadow: 0 2px 4px #505050;
+  cursor: default;
+  z-index: 4;
+  /************ Show NAV Button ******************************/
+  /************ WEBSITE NAME ********************************/
+  /************ ABOUT Button *********************************/ }
+  .header_box .btn_box_visible,
+  .header_box .webpage_name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; }
+  .header_box .btn_box_visible {
+    padding-left: 12px; }
+    .header_box .btn_box_visible .nav_show_btn {
+      width: 26px;
+      height: 26px;
+      margin-top: 6px;
+      padding-left: 2px;
+      outline: none;
+      border: 1px solid #0c6b6b;
+      border-radius: 4px;
+      background: #792525;
+      box-shadow: 0 0 2px #505050; }
+      .header_box .btn_box_visible .nav_show_btn .bg_img {
+        width: 20px;
+        height: 20px;
+        background-image: url("../assets/icon/nav_green_icon.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        border: none;
+        border-radius: 4px; }
+      .header_box .btn_box_visible .nav_show_btn .show_nav_tooltip {
+        visibility: hidden;
+        width: 130px;
+        top: 56px;
+        left: 10px;
+        padding: 4px 8px;
+        position: absolute;
+        background: #e2dcb8;
+        border: 1px solid rgba(148, 108, 59, 0.8);
+        border-radius: 6px;
+        z-index: 8; }
+      .header_box .btn_box_visible .nav_show_btn .arrow_left {
+        display: block;
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        left: 18px;
+        background: #e2dcb8;
+        border-left: 1px solid rgba(148, 108, 59, 0.8);
+        border-top: 1px solid rgba(148, 108, 59, 0.8);
+        z-index: 8;
+        transform: translateY(-70%) rotate(45deg); }
+      .header_box .btn_box_visible .nav_show_btn p, .header_box .btn_box_visible .nav_show_btn li {
+        font-family: "Catamaran", sans-serif;
+        letter-spacing: 1px; }
+      .header_box .btn_box_visible .nav_show_btn p {
+        padding-top: 4px;
+        color: #054a6e;
+        font-size: 17px;
+        font-weight: 500;
+        text-align: center; }
+      .header_box .btn_box_visible .nav_show_btn li {
+        color: #47472e;
+        font-size: 15px;
+        font-weight: 300;
+        text-align: left;
+        line-height: 22px; }
+        .header_box .btn_box_visible .nav_show_btn li span {
+          margin-right: 6px;
+          color: #054a6e;
+          font-size: 16px;
+          font-weight: 500; }
+      .header_box .btn_box_visible .nav_show_btn ul {
+        padding: 4px 4px 0 4px;
+        list-style: none;
+        border-top: 1px solid rgba(148, 108, 59, 0.8); }
+      .header_box .btn_box_visible .nav_show_btn:hover {
+        cursor: pointer;
+        background: rgba(31, 148, 221, 0.6);
+        border: 1px solid #ffca57;
+        box-shadow: inset 0 0 2px #505050; }
+        .header_box .btn_box_visible .nav_show_btn:hover .bg_img {
+          background-image: url("../assets/icon/nav_yellow_icon.png");
+          background-size: contain;
+          background-repeat: no-repeat;
+          animation: rotateY 1s; }
+        .header_box .btn_box_visible .nav_show_btn:hover .show_nav_tooltip {
+          visibility: visible; }
+  .header_box .btn_box_hidden {
+    width: 11%;
+    opacity: 0; }
+  .header_box .webpage_name {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center; }
+    .header_box .webpage_name .title {
+      width: 100%;
+      color: #054a6e;
+      font-family: "Jura", sans-serif, sans-serif;
+      font-weight: 900;
+      letter-spacing: -1px;
+      text-align: center;
+      transform: scaleY(120%); }
+  .header_box .btn_box_about {
+    padding-right: 12px; }
+    .header_box .btn_box_about .about_btn {
+      width: 26px;
+      height: 26px;
+      margin-top: 6px;
+      outline: none;
+      border: 1px solid #0c6b6b;
+      border-radius: 4px;
+      background: #792525;
+      box-shadow: 0 0 2px #505050; }
+      .header_box .btn_box_about .about_btn .questionmark {
+        margin: -6px 0 0 1px;
+        font-family: "Jura", sans-serif;
+        color: #839960;
+        font-size: 18px;
+        font-weight: 500; }
+      .header_box .btn_box_about .about_btn .about_tooltip {
+        visibility: hidden;
+        display: block;
+        width: 130px;
+        top: 56px;
+        right: 10px;
+        padding: 4px 8px;
+        position: absolute;
+        background: #e2dcb8;
+        border: 1px solid rgba(148, 108, 59, 0.8);
+        border-radius: 6px;
+        z-index: 8; }
+      .header_box .btn_box_about .about_btn .arrow_right {
+        display: block;
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        right: 18px;
+        background: #e2dcb8;
+        border-left: 1px solid rgba(148, 108, 59, 0.8);
+        border-top: 1px solid rgba(148, 108, 59, 0.8);
+        z-index: 8;
+        transform: translateY(-70%) rotate(45deg); }
+      .header_box .btn_box_about .about_btn p, .header_box .btn_box_about .about_btn li {
+        font-family: "Catamaran", sans-serif;
+        letter-spacing: 1px; }
+      .header_box .btn_box_about .about_btn p {
+        padding-top: 4px;
+        color: #054a6e;
+        font-size: 17px;
+        font-weight: 500;
+        text-align: center; }
+      .header_box .btn_box_about .about_btn li {
+        color: #47472e;
+        font-size: 15px;
+        font-weight: 300;
+        text-align: left;
+        line-height: 22px; }
+        .header_box .btn_box_about .about_btn li span {
+          margin-right: 6px;
+          color: #054a6e;
+          font-size: 17px;
+          font-weight: 500; }
+      .header_box .btn_box_about .about_btn ul {
+        padding: 4px 4px 0 4px;
+        list-style: none;
+        border-top: 1px solid rgba(148, 108, 59, 0.8); }
+      .header_box .btn_box_about .about_btn:hover {
+        cursor: pointer;
+        background: rgba(31, 148, 221, 0.6);
+        border: 1px solid #ffca57;
+        box-shadow: inset 0 0 2px #505050; }
+        .header_box .btn_box_about .about_btn:hover .questionmark {
+          color: #ffca57;
+          animation: rotateY 1s; }
+        .header_box .btn_box_about .about_btn:hover .about_tooltip {
+          visibility: visible; }
+
+/************ Animations ***********************************/
+@keyframes scaleAndTranslate {
+  0% {
+    transform: scale(100%) translateZ(0); }
+  50% {
+    transform: scale(84%) translateZ(10px); }
+  100% {
+    transform: scale(100%) translateZ(0); } }
+@keyframes rotateY {
+  from {
+    transform: rotateY(0); }
+  to {
+    transform: rotateY(360deg); } }
+
+/*# sourceMappingURL=nav_and_header.css.map */

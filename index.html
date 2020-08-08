@@ -10,89 +10,307 @@
     <title>Smart-fridge</title>
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icon/green_fridge_icon.png">
 
+    <link href="css/nav_and_header.css" rel="stylesheet" type="text/css">
     <link href="css/stylesheet_index.css" rel="stylesheet" type="text/css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Gruppo&family=Jura:wght@300;400;500;515;600;700&family=Varela+Round&display=swap" rel="stylesheet"> 
 </head>
-<body>
 
-    <header class="header_box" id="headerBox">
-        <div class="btn_box_visible" id="navBtnBox">
-            <button class="nav_show_btn" id="showNavbar"><img src="assets/icon/nav_icon_small.png" alt=""></button>
-        </div>
-        <div class="webpage_name" id="webpageName">
-            <h1 class="title" id="webName">Smart-Fridge</h1>
-        </div>
-    </header>
-    
+<body>
     <nav class="hidden_nav" id="navBar">
         <div class="btn_box_visible">
-            <button class="nav_hide_btn" id="hideNavbar"><img src="assets/icon/arrow_up_icon_small.png" alt=""></button>
+            <button class="nav_hide_btn" id="hideNavbar">
+                <div class="bg_img"></div>
+                <div class="hide_nav_tooltip" id="HideNavTooltip">
+                    <span class="arrow_left"></span>
+                    <p><span>&#x2713;</span>hide navbar</p>
+                </div>
+            </button>
         </div>
 
-        <div class="nav_box">  
-            <button class="navButton" id="navRecipe"><a href="#recipeImage">Receip</a></button>
-            <button class="navBreak"></button>
-            <button class="navButton" id="navExplain"><a href="explain.html">How it works?</a></button>
-            <button class="navButton" id="navContact"><a href="contact.html">Contact</a></button>
-            <!--
-            <button class="navButton" id="home"><a href="#"><img src="assets/icon/home_icon_small.png" alt=""></a></button>
-            -->
+        <div class="nav_btn_box">  
+            <button class="navButton" id="navRecipeBtn"><p>Recipe</p></button>
+        </div>
+
+        <div class="nav_btn_box">
+            <button class="navButton" id="navExplainBtn"><p>How it works?</p></button>
+        </div>
+
+        <div class="nav_btn_box">
+            <button class="navButton" id="navContactBtn"><p>Contact</p></button>
         </div>
     </nav>
 
-    <aside class="search_box" id="searchBox">
-        <form action="#">
-            <input type="search" class="ingredient_input" id="ingredientInput" placeholder="Enter your ingredients" size="23" aria-label="Search through site content" name="S">
-            <button type="submit" class="search_btn" id="enterSearch">Search</button>
-        </form>
-    </aside>
-
-    <aside class="ingredient_box" id="ingredientBox">
-        <div id="search-result">
-            <template id="tpl-ingr">
-               <span class="ingredient">
-                    <img class="ing-img" src="" alt="">
-                    <div class="ing-name"> name </div>
-                   <!-- changed from div to span!!!-->
-               </span>
-            </template>
-        </div>
-    </aside>
-
-    <main class="selection_box" id="mainPage">
-
-        <section class="fridge_box" id="selectionBox">
-            <div class="fridge_content" id="fridge">
-
-            </div>
-                
-            <div class="chef_box" id="random">
-                <button class="chef_btn" id="btn-chef">Check our chef's choice</button>
-            </div>
-        </section>
-
-        <section class="recipe_box">
-            <header class="recipe_header" id="recipe">
-                <div class="recipe_photo_box" id="recipePhotoBox">
-                    <img class="recipe_photo" id="recipeImage" src="assets/img/food-01-small.jpg" alt="">
+    <header class="header_box" id="headerBox">
+        <div class="btn_box_visible" id="navBtnBox">
+            <button class="nav_show_btn" id="showNavbar">
+                <div class="bg_img"></div>
+                <div class="show_nav_tooltip" id="showNavTooltip">
+                    <span class="arrow_left"></span>
+                    <p>Navigation</p>
+                    <ul>
+                        <li><span>&#x2713;</span>Recipe</li>
+                        <li><span>&#x2713;</span>How it works?</li>
+                        <li><span>&#x2713;</span>Contact</li>
+                    </ul>
                 </div>
-                <div class="recipe_title_box" id="recipeTitleBox">
+            </button>
+        </div>
+        
+        <div class="webpage_name" id="webpageName">
+            <h1 class="title" id="webName">Smart-Fridge</h1>
+        </div>
+
+        <div class="btn_box_about" id="aboutBtnBox">
+            <button class="about_btn" id="showAbout">
+                <p class="questionmark">?</p>
+                <div class="about_tooltip" id="aboutTooltip">
+                    <span class="arrow_right"></span>
+                    <p>About us...</p>
+                    <ul>
+                        <li><span>&#x2713;</span>Our app</li>
+                        <li><span>&#x2713;</span>Requirements</li>
+                    </ul>
+                </div>
+            </button>
+        </div>   
+    </header>
+
+    <article class="about_hidden" id="aboutSmartFridge">
+        <h3>Click on the text to go to the site...</h3>
+
+        <div class="popup_box about_app" id="aboutBox">
+            <header class="article_header about_header" id="aboutHeader">
+                <div class="photo_box about_photo_box" id="photoAboutBox">
+                    <img class="photo about_photo" id="aboutImage" src="assets/img/food-05-small.jpg" alt="">
+                </div>
+                <div class="title_box about_title_box" id="aboutTitleBox">
+                    <h3 class="article_title about_title" id="titleAbout">About us...</h3>
+                </div>
+            </header>
+                
+            <section class="popup_text_box about_text_box" id="aboutContentBox">
+                <h4 class="text_title about_text_title">What's Smart-Fridge ?</h4>
+                <p class="text about_text">
+                    <span>&#x2713;</span>Our Smartfridge app can give you food ideas, based on your ingredients at home and in your fridge.
+                    <br class="breakline">
+                    <span>&#x2713;</span>It can also give you ideas for drinks such as homemade milkshakes, iced teas, cocktails...
+                    <br class="breakline">
+                    <span>&#x2713;</span>And our website is totally free!
+                </p>
+                <h4 class="text_title about_subTitle">Requirements:</h4>
+                <p class="text about_text">
+                    <span>&#x2713;</span>You just need internet!
+                    <br class="breakline">
+                    <span>&#x2713;</span>And of course food at home. 
+                </p>
+                <h4 class="text_title about_subTitle">Contact</h4>
+                <p class="text about_text">
+                    <span>&#x2713;</span>For more information or if you need help, you can always contact us.
+                    <span>&#8658;</span>Just fill in our contact form.
+                </p>
+            </section>
+        </div>
+
+        <div class="copyBox">
+            <h4 class="our_brand">&#126; &#8482; <span class="name">Smart &#8211; fridge</span> &#8482; &#126;
+                <br>&#126; <span id="dayTime"></span> &#126;</h4>
+            <h4>Our chef always has tasty<br class="breakline"> food idea's for you.<br class="breakline">So just try it out.</h4>
+        </div>
+    </article>
+
+    <article class="recipe_hidden" id="recipeSmartFridge">
+        <h3>Click on the text to go to the site...</h3>
+
+        <div class="popup_box recipe_box">
+            <header class="article_header recipe_header" id="recipe">
+                <div class="photo_box recipe_photo_box" id="recipePhotoBox">
+                    <img class="photo recipe_photo" id="recipeImage" src="assets/img/food-01-small.jpg" alt="">
+                </div>
+                <div class="title_box recipe_title_box" id="recipeTitleBox">
                     <div class="open_space"></div>
-                    <h3 class="recipe_title" id="recipeTitle">The recipe...</h3>
+                    <h3 class="article_title recipe_title" id="recipeTitle">The recipe...</h3>
                     <div class="open_space"></div>
                 </div>
             </header>
-            <div class="recipe_text_box" id="recipeContentBox">
-                <h3 class="recipe_name" id="recipeName">ex. Curried rice salad</h3>
-                <p class="recipe_text" id="recipeText">
+            <section class="text_box recipe_text_box" id="recipeContentBox">
+                <h4 class="text_title recipe_name" id="recipeName">ex. Curried rice salad</h4>
+                <p class="text recipe_text" id="recipeText">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi eligendi harum aut illo aliquam nihil quas ex placeat molestiae consequatur quos nesciunt, magni eveniet deserunt natus facere quidem. Unde repellendus est excepturi ipsum totam quam quia facilis maxime sequi optio possimus et veritatis laboriosam, ab quod veniam corporis aperiam ullam.
-                </p>
-            </div>
-        </section>
+                </p>  
+            </section>
+        </div>
 
+        <div class="copyBox">
+            <h4 class="our_brand">&#126; &#8482; <span class="name">Smart &#8211; fridge</span> &#8482; &#126;
+                <br>&#126; <span id="dayAndTime"></span> &#126;</h4>
+            <h4>Our chef always has tasty<br class="breakline"> food idea's for you.<br class="breakline">So just try it out.</h4>
+        </div> 
+    </article>
+
+    <article class="explain_hidden" id="explainSmartFridge">
+        <h3>Click on the text to go to the site...</h3>
+        
+        <div class="popup_box explain_app" id="explainBox">
+            <header class="article_header explain_header" id="explainHeader">
+                <div class="photo_box explain_photo_box" id="photoExplainBox">
+                    <img class="photo explain_photo" id="explainImage" src="assets/img/food-02-small.jpg" alt="">
+                </div>
+                <div class="title_box explain_title_box" id="explainTitleBox">
+                    <h3 class="article_title explain_title" id="titleExplain">How it works ?</h3>
+                </div>
+            </header>
+                
+            <section class="popup_text_box explain_text_box" id="explainContentBox">
+                <h4 class="text_title explain_text_title">Getting started...</h4>
+                <div class="paragraph">
+                    <p class="text explain_text first">
+                        <span>Step 1 &#8658;</span> Enter your ingredients in the input field and click on search.
+                    </p>
+                    <p class="text explain_text">
+                        <span>Step 2 &#8658;</span> Now you will see a list of food ideas of your ingredients.
+                    </p>
+                    <p class="text explain_text">
+                        <span>Step 3 &#8658;</span> Once you click on 1 of the meals you can see the recipe for the meal on the
+                        Recipe section or in your fridge.
+                    </p>
+                    <p class="text explain_text">
+                        <span>Step 4 &#8658;</span> When you click the ingredients in your fridge it will be removed
+                    </p>
+                    <p class="text explain_text last">
+                        <span>Step 5 &#8658;</span> There is random recipe that connects with the ingredients in your fridge.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <div class="copyBox">
+            <h4 class="our_brand">&#126; &#8482; <span class="name">Smart &#8211; fridge</span> &#8482; &#126;
+                <br>&#126; <span id="timeDay"></span> &#126;</h4>
+            <h4>Our chef always has tasty<br class="breakline"> food idea's for you.<br class="breakline">So just try it out.</h4>
+        </div>        
+    </article>
+
+    <article class="contact_hidden" id="contactSmartFridge">
+        <h3>Click the button bellow to close the form...</h3>
+
+        <div class="popup_box contact_app" id="contactBox"> 
+            <header class="article_header contact_header" id="contactHeader">
+                <div class="photo_box contact_photo_box" id="photoContactBox">
+                    <img class="photo contact_photo" id="contactImage" src="assets/img/food-03-small.jpg" alt="">
+                </div>
+                <div class="title_box contact_title_box" id="contactTitleBox">
+                    <h3 class="article_title contact_title" id="titleContact">Contact us...</h3>
+                </div>
+            </header>
+            
+            <div class="popup_text_box contact_form_box" id="formBox">
+                <form class="contact_form" action="mailto:jdv.editing@gmail.com">
+                    <fieldset class="form_field_one">
+                        <label class="form_label" for="firstName">First name:</label>
+                        <input class="form_input" type="text" name="firstname" id="firstName" placeholder="enter firstname" >
+
+                        <label class="form_label" for="lastName">Last name:</label>
+                        <input class="form_input" type="text" name="lastName" id="lastName" placeholder="enter lastname">
+
+                        <label class="form_label" for="mail">Your email:</label>
+                        <input class="form_input" type="email" name="mailto" id="mail" placeholder="someone@example.com">
+
+                        <input class="form_btn" type="submit" value="Send" id="submit">
+                    </fieldset>
+                    <div class="open_space"></div>
+                    <fieldset class="form_field_two">
+                        <label class="form_label" for="textField" id="textLabel">Comments or questions:</label>
+                        <textarea class="form_message" name="message" id="textField" rows="6" cols="23" placeholder="Enter you message"></textarea><br>
+                    </fieldset>
+                </form>
+            </div>
+
+            <footer class="contact_footer">
+                <button class="window_btn" id="windowBtn"><span>&#10233;</span><p>close the form</p><span>&#10232;</span></button>
+            </footer>
+        </div>
+
+        <div class="copyBox">
+            <h4 class="our_brand">&#126; &#8482; <span class="name">Smart &#8211; fridge</span> &#8482; &#126;
+                <br>&#126; <span id="formTime"></span> &#126;</h4>
+            <h4>Our chef always has tasty<br class="breakline"> food idea's for you.<br class="breakline">So just try it out.</h4>
+        </div>
+    </article>
+
+    <main class="main_box" id="mainPage">
+        <div class="background_one">
+            <aside class="search_box" id="searchBox">
+                <form action="#">
+                    <input type="search" class="ingredient_input" id="ingredientInput" placeholder="Enter your ingredients" size="23" aria-label="Search through site content" name="S">
+                    <button type="submit" class="search_btn" id="enterSearch">Search</button>
+                </form>
+            </aside>
+
+            <aside class="ingredient_box" id="ingredientBox">
+                <div id="search-result">
+                    <template id="tpl-ingr">
+                    <span class="ingredient">
+                            <img class="ing-img" src="" alt="">
+                            <div class="ing-name"> name </div>
+                        <!-- changed from div to span!!!-->
+                    </span>
+                    </template>
+                </div>
+            </aside>
+
+            <section class="fridge_box" id="selectionBox">
+                <div class="fridge_content" id="fridge">
+
+                </div>
+                    
+                <div class="chef_box" id="random">
+                    <button class="chef_btn" id="btn-chef">Check our chef's choice</button>
+                </div>
+            </section>
+        </div>
+        
+
+        <article class="recipe_box">
+            <header class="article_header recipe_header" id="recipe">
+                <div class="photo_box recipe_photo_box" id="recipePhotoBox">
+                    <img class="photo recipe_photo" id="recipeImage" src="assets/img/food-01-small.jpg" alt="">
+                </div>
+                <div class="title_box recipe_title_box" id="recipeTitleBox">
+                    <div class="open_space"></div>
+                    <h3 class="article_title recipe_title" id="recipeTitle">The recipe...</h3>
+                    <div class="open_space"></div>
+                </div>
+            </header>
+            <section class="text_box recipe_text_box" id="recipeContentBox">
+                <h4 class="text_title recipe_name" id="recipeName">ex. Curried rice salad</h4>
+                <p class="text recipe_text" id="recipeText">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi eligendi harum aut illo aliquam nihil quas ex placeat molestiae consequatur quos nesciunt, magni eveniet deserunt natus facere quidem. Unde repellendus est excepturi ipsum totam quam quia facilis maxime sequi optio possimus et veritatis laboriosam, ab quod veniam corporis aperiam ullam.
+                </p>  
+            </section>
+        </article>
     </main>
 
+    <footer class="rights">
+        <div class="left_footer">
+            <p>This version is made by :&nbsp;&nbsp; 
+                <span>Jeroen De Vos</span>
+            </p>
+            <p id="copyRights"></p>
+        </div>
+        <div class="right_footer">
+            <a href="https://github.com/Jeroen-editing">
+                <button class="link github"><img class="linkImg" src="assets/icon/github2.png" alt=""></button>
+            </a>
+            <a href="https://www.linkedin.com/in/jeroen-de-vos-39258718b/">
+                <button class="link linkedin" id="linkedIn"><img class="linkImg" src="assets/icon/linkedin2.png" alt=""></button>
+            </a>
+        </div>
+        
+    </footer>
+
     <script src="nav_index.js"></script>
-    
+    <script src="popups.js"></script>
+    <script src="copyRights.js"></script>
 </body>
 </html>

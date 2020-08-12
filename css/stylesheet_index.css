@@ -23,8 +23,8 @@ body {
   height: 92px;
   margin-top: 61px;
   padding: 4px 0;
-  background: #948b72;
-  border-bottom: 1px solid #037d7d; }
+  background: #dfd7c0;
+  border-bottom: 1px solid rgba(148, 108, 59, 0.28); }
   .search_box form {
     display: flex;
     flex-direction: column;
@@ -36,21 +36,19 @@ body {
     display: block;
     height: 32px;
     width: 300px;
-    color: #1a5323;
+    color: #47472e;
     font-family: "Gruppo", cursive;
     font-weight: 800;
     text-align: center;
-    border: 1px solid #0c6b6b;
+    border: 1px solid rgba(94, 87, 70, 0.6);
     border-radius: 6px; }
   .search_box .ingredient_input {
     font-size: 18px;
     background: rgba(255, 255, 255, 0.8);
-    box-shadow: inset 0 0 2px #505050;
     cursor: text; }
   .search_box .search_btn {
     font-size: 24px;
-    background: rgba(255, 202, 87, 0.6);
-    box-shadow: 0 0 2px #505050; }
+    background: rgba(220, 191, 77, 0.6); }
     .search_box .search_btn:hover {
       cursor: pointer;
       color: #ffca57;
@@ -63,18 +61,18 @@ body {
   display: block;
   min-height: 12rem;
   position: relative;
-  background: rgba(223, 221, 199, 0.7);
-  border-bottom: 1px solid #037d7d; }
+  background: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(148, 108, 59, 0.28); }
 
 /************ FRIDGE & RECIPE BOX ***********************************/
 /**************** fridge ****************/
 .fridge_box {
   width: 100%;
-  border-bottom: 1px solid #037d7d;
-  border-bottom-width: 3px; }
+  border-bottom: 1px solid #5e5746;
+  border-bottom-width: 1px; }
   .fridge_box .fridge_content {
     min-height: 12rem;
-    background: rgba(223, 221, 199, 0.7); }
+    background: rgba(255, 255, 255, 0.7); }
   .fridge_box .chef_box {
     display: flex;
     flex-direction: column;
@@ -83,21 +81,20 @@ body {
     min-height: 50px;
     position: sticky;
     bottom: 0px;
-    background: #948b72;
-    border-top: 1px solid #037d7d; }
+    background: #dfd7c0;
+    border-top: 1px solid rgba(148, 108, 59, 0.28); }
     .fridge_box .chef_box .chef_btn {
       display: block;
       height: 32px;
       width: 300px;
-      color: #1a5323;
+      color: #47472e;
       font-family: "Gruppo", cursive;
       font-size: 24px;
       font-weight: 900;
       text-align: center;
-      background: rgba(255, 202, 87, 0.6);
-      border: 1px solid #0c6b6b;
-      border-radius: 6px;
-      box-shadow: 0 0 1px #505050; }
+      background: rgba(220, 191, 77, 0.6);
+      border: 1px solid rgba(94, 87, 70, 0.6);
+      border-radius: 6px; }
       .fridge_box .chef_box .chef_btn:hover {
         cursor: pointer;
         color: #ffca57;
@@ -109,23 +106,21 @@ body {
 /**************** recipe ****************/
 .recipe_box,
 .popup_box {
-  overflow: hidden;
   overflow-y: scroll;
-  background: #dfddc7;
+  background: white;
+  border-width: 2px;
   cursor: default; }
 
 .recipe_box {
   width: 100%;
-  background: #dfddc7;
-  border-bottom: 1px solid #037d7d;
-  border-bottom-width: 3px; }
+  border-bottom: 1px solid #5e5746;
+  border-bottom-width: 2px; }
 
 .popup_box {
   width: 90%;
-  margin: 10px auto;
-  border: 1px solid #037d7d;
-  border-width: 3px;
-  border-radius: 6px;
+  margin: 8px auto;
+  border: 1px solid #5e5746;
+  border-radius: 3px;
   animation: scaleIn 1.5s forwards; }
 
 .article_header {
@@ -133,23 +128,21 @@ body {
   flex-direction: row;
   width: auto;
   height: 68px;
-  border-bottom: 1px solid #037d7d; }
+  background: #cac1a9;
+  border-bottom: 1px solid rgba(94, 87, 70, 0.6); }
   .article_header .photo_box {
     width: 36%;
     overflow: hidden;
-    border-right: 1px solid #037d7d;
-    border-right-width: 2px; }
+    border-right: 1px solid rgba(94, 87, 70, 0.6);
+    border-right-width: 1px; }
     .article_header .photo_box .photo {
       width: 100%; }
   .article_header .title_box {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 70%;
-    background: #b4ab94; }
-    .article_header .title_box .open_space {
-      height: 24%;
-      background: #b4ab94; }
+    width: 65%;
+    background: #cac1a9; }
     .article_header .title_box .article_title {
       padding: 4px 0 4px 14px;
       color: #054a6e;
@@ -157,9 +150,9 @@ body {
       font-size: 20px;
       font-weight: 800;
       text-align: left;
-      background-color: rgba(131, 153, 96, 0.8);
-      border-top: 1px solid #037d7d;
-      border-bottom: 1px solid #037d7d; }
+      background-color: rgba(131, 153, 96, 0.44);
+      border-top: 1px solid rgba(148, 108, 59, 0.28);
+      border-bottom: 1px solid rgba(148, 108, 59, 0.28); }
 
 .text_box,
 .popup_text_box {
@@ -180,9 +173,10 @@ body {
     font-weight: 600;
     text-align: left;
     background: rgba(131, 153, 96, 0.44);
-    border: 1px solid rgba(65, 109, 46, 0.2);
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px; }
+    border: 1px solid rgba(148, 108, 59, 0.28);
+    border-bottom: none;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px; }
   .text_box .paragraph,
   .text_box .text,
   .text_box .form_input,
@@ -192,7 +186,7 @@ body {
   .popup_text_box .form_input,
   .popup_text_box .form_message {
     margin-bottom: 8px;
-    padding: 8px  8px 6px 8px;
+    padding: 8px 8px 6px 8px;
     color: #243611;
     color: #47472e;
     font-family: "Catamaran", sans-serif;
@@ -201,11 +195,11 @@ body {
     letter-spacing: 1px;
     text-align: left;
     line-height: 20px;
-    background: rgba(180, 171, 148, 0.2);
-    border: 1px solid rgba(148, 108, 59, 0.2);
+    background: rgba(223, 215, 192, 0.2);
+    border: 1px solid rgba(148, 108, 59, 0.28);
     border-top: none;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px; }
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px; }
     .text_box .paragraph .breakline,
     .text_box .text .breakline,
     .text_box .form_input .breakline,
@@ -216,7 +210,7 @@ body {
     .popup_text_box .form_message .breakline {
       display: block;
       margin-top: 8px;
-      border-bottom: 1px solid #948b72; }
+      border-bottom: 1px solid #cac1a9; }
     .text_box .paragraph span,
     .text_box .text span,
     .text_box .form_input span,
@@ -232,11 +226,11 @@ body {
   .text_box .explain_text,
   .popup_text_box .explain_text {
     margin: 4px auto;
-    padding: 6px 0 16px 0;
+    padding: 6px 0 10px 0;
     width: 96%;
     background: none;
     border: none;
-    border-bottom: 1px solid #b4ab94;
+    border-bottom: 1px solid #dfd7c0;
     border-radius: 0px; }
   .text_box .paragraph .first,
   .popup_text_box .paragraph .first {
@@ -257,8 +251,8 @@ body {
   .contact_form .form_input,
   .contact_form .form_message {
     display: block;
-    padding-right: 0;
-    width: 98%; }
+    margin-right: 20px;
+    padding-right: 0px; }
   .contact_form .form_input,
   .contact_form .form_message {
     cursor: text; }
@@ -274,9 +268,14 @@ body {
     .contact_form .form_message::placeholder {
       color: rgba(71, 71, 46, 0.6);
       font-weight: 100; }
+  .contact_form .form_label {
+    width: 98%; }
   .contact_form .form_input {
-    height: 24px; }
+    width: 96%;
+    height: 20px;
+    padding: 4px 8px 2px 8px; }
   .contact_form .form_message {
+    width: 98%;
     padding-bottom: 0px; }
   .contact_form .open_space {
     width: 100%;
@@ -288,14 +287,14 @@ body {
     height: 26px;
     margin-top: 12px;
     padding: 2px 6px;
-    color: #1a5323;
+    color: #47472e;
     font-family: "Gruppo", cursive;
     font-size: 20px;
     font-weight: 900;
     text-align: center;
-    background: #ffca57;
+    background: #dcbf4d;
     border: 1px solid rgba(12, 107, 107, 0.2);
-    border-radius: 6px; }
+    border-radius: 3px; }
     .contact_form .form_btn:hover {
       cursor: pointer;
       color: #ffca57;
@@ -306,9 +305,10 @@ body {
 .contact_footer {
   width: 100%;
   height: 36px;
+  overflow: hidden;
   background: green;
-  border-top: 1px solid #037d7d;
-  border-top-width: 4px; }
+  border-top: 1px solid #5e5746;
+  border-top-width: 2px; }
   .contact_footer .window_btn {
     display: flex;
     flex-direction: row;
@@ -316,12 +316,10 @@ body {
     width: 100%;
     height: 36px;
     padding-top: 4px;
-    background: #ffca57;
-    border: 1px solid #ffca57;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px; }
+    background: #dcbf4d;
+    border: none; }
     .contact_footer .window_btn p {
-      color: #1a5323;
+      color: #47472e;
       font-family: "Gruppo", cursive;
       font-size: 18px;
       font-weight: 700;
@@ -334,10 +332,9 @@ body {
       line-height: 16px; }
     .contact_footer .window_btn:hover {
       cursor: pointer;
-      background: #1f94dd;
-      border: 1px solid rgba(121, 37, 37, 0.2); }
+      background: #1f94dd; }
       .contact_footer .window_btn:hover span {
-        color: #792525; }
+        color: #47472e; }
       .contact_footer .window_btn:hover p {
         color: #ffca57;
         text-shadow: 0 0 2px black; }
@@ -353,7 +350,7 @@ body {
 .explain_visible,
 .contact_visible {
   display: block;
-  height: 58.3rem;
+  height: 59.8rem;
   margin: 0 auto;
   padding: 0 8px;
   position: absolute;
@@ -363,7 +360,7 @@ body {
   .recipe_visible h3,
   .explain_visible h3,
   .contact_visible h3 {
-    padding-top: 10px;
+    padding-top: 8px;
     color: white;
     font-family: "Gruppo", cursive;
     font-size: 18px;
@@ -421,7 +418,7 @@ body {
   flex-direction: row;
   justify-content: center;
   padding: 6px 0;
-  background: #b4ab94;
+  background: #dfd7c0;
   cursor: default; }
   .rights .left_footer {
     margin-left: 6px; }

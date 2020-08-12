@@ -9,23 +9,20 @@ body {
 }
 
 
-$nav_bg: rgb(121, 37, 37);
-
-$darkest_bg: rgb(148, 139, 114);
-$dark_bg: rgb(180, 171, 148);
-$light_bg: rgb(223, 221, 199);
-$borders: 1px solid rgb(3, 125, 125);
+$darkest_bg: rgb(202, 193, 169);
+$dark_bg: rgb(223, 215, 192);
+$light_bg: rgb(255, 255, 255);
+$borders: 1px solid rgb(94, 87, 70);
 
 $title_font: 'Jura', sans-serif;
 $title_color: rgb(5, 74, 110);
 $title_bg: rgb(131, 153, 96);
 
-$subtitle_border: 1px solid rgba(65, 109, 46, 0.2);
+$header_bg: rgba(131, 153, 96, 0.44);
 
 $btn_font: 'Gruppo', cursive;
-$btn_text: rgb(26, 83, 35);
-$btn_bg: rgb(255, 202, 87);
-$btn_border: 1px solid rgb(12, 107, 107);
+$btn_bg: rgb(220, 191, 77);
+$btn_border: 1px solid rgba(94, 87, 70, 0.6);
 
 $hover_bg: rgb(31, 148, 221);
 $hover_border: 1px solid rgb(255, 202, 87);
@@ -35,7 +32,7 @@ $shadow: rgb(80, 80, 80);
 
 $text_font: 'Catamaran', sans-serif;
 $text_color: rgb(71, 71, 46);
-$text_border: 1px solid rgba(148, 108, 59, 0.2);
+$text_border: 1px solid rgba(148, 108, 59, 0.28);
 
 
 /************ MAIN PAGE ************************************/
@@ -62,8 +59,8 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
     height: 92px;
     margin-top: 61px;
     padding: 4px 0;
-    background: $darkest_bg;
-    border-bottom: $borders;
+    background: $dark_bg;
+    border-bottom: $text_border;
 
     form {
         display: flex;
@@ -78,7 +75,7 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
         display: block;
         height: 32px;
         width: 300px;
-        color: $btn_text;
+        color: $text_color;
         font-family: $btn_font;
         font-weight: 800;
         text-align: center;
@@ -88,14 +85,12 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
     .ingredient_input {
         font-size: 18px;
         background: rgba(255, 255, 255, 0.8);
-        box-shadow: inset 0 0 2px $shadow;
         cursor: text;
     }
 
     .search_btn {
         font-size: 24px;
         background: rgba($btn_bg, 0.6);
-        box-shadow: 0 0 2px $shadow;
 
         &:hover {
             cursor: pointer;
@@ -113,7 +108,7 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
     min-height: 12rem;
     position: relative;
     background: rgba($light_bg, 0.7);
-    border-bottom: $borders;
+    border-bottom: $text_border
 }
 
 
@@ -124,7 +119,7 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
 .fridge_box{
     width: 100%;
     border-bottom: $borders;
-    border-bottom-width: 3px;
+    border-bottom-width: 1px;
 
     .fridge_content {
         min-height: 12rem;
@@ -138,14 +133,14 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
         min-height: 50px;
         position: sticky;
         bottom: 0px;
-        background: $darkest_bg;
-        border-top: $borders;
+        background: $dark_bg;
+        border-top: $text_border;
 
         .chef_btn {
             display: block;
             height: 32px;
             width: 300px;
-            color: $btn_text;
+            color: $text_color;
             font-family: $btn_font;
             font-size: 24px;
             font-weight: 900;
@@ -153,7 +148,6 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
             background: rgba($btn_bg, 0.6);
             border: $btn_border;
             border-radius: 6px;
-            box-shadow: 0 0 1px $shadow;
 
             &:hover {
                 cursor: pointer;
@@ -172,25 +166,23 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
 
 .recipe_box,
 .popup_box {
-    overflow: hidden;
     overflow-y: scroll;
     background: $light_bg;
+    border-width: 2px;
     cursor: default;
 }
 
 .recipe_box {
     width: 100%;
-    background: $light_bg; 
     border-bottom: $borders;
-    border-bottom-width: 3px;
+    border-bottom-width: 2px;
 }
 
 .popup_box {
     width: 90%;
-    margin: 10px auto;
+    margin: 8px auto;
     border: $borders;
-    border-width: 3px;
-    border-radius: 6px;
+    border-radius: 3px;
     animation: scaleIn 1.5s forwards;
 }
         
@@ -199,13 +191,14 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
     flex-direction: row;
     width: auto;
     height: 68px;
-    border-bottom: $borders;
+    background: $darkest_bg;
+    border-bottom: 1px solid rgba(94, 87, 70, 0.6);
             
     .photo_box {
         width: 36%;
         overflow: hidden;
-        border-right: $borders;
-        border-right-width: 2px;
+        border-right: 1px solid rgba(94, 87, 70, 0.6);
+        border-right-width: 1px;
 
         .photo {
             width: 100%;
@@ -215,13 +208,8 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 70%;
-        background: $dark_bg;
-                
-        .open_space {
-            height: 24%;
-            background: $dark_bg;
-        }
+        width: 65%;
+        background: $darkest_bg;
 
         .article_title {
             padding: 4px 0 4px 14px;
@@ -230,9 +218,9 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
             font-size: 20px;
             font-weight: 800;
             text-align: left;
-            background-color: rgba($title_bg, 0.8);
-            border-top: $borders;
-            border-bottom: $borders;
+            background-color: $header_bg;
+            border-top: $text_border;
+            border-bottom: $text_border;
         }
     }    
 }
@@ -255,16 +243,17 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
         font-weight: 600;
         text-align: left;
         background: rgba($title_bg, 0.44);
-        border: $subtitle_border;        
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
+        border: $text_border;
+        border-bottom: none;        
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
     }
     .paragraph,
     .text,
     .form_input,
     .form_message {
         margin-bottom: 8px;
-        padding: 8px  8px 6px 8px;
+        padding: 8px 8px 6px 8px;
         color: rgb(36, 54, 17);
         color: $text_color;
         font-family: $text_font;
@@ -276,8 +265,8 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
         background: rgba($dark_bg, 0.2);
         border: $text_border;
         border-top: none;
-        border-bottom-left-radius: 6px;
-        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;
 
         .breakline {
             display: block;
@@ -295,7 +284,7 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
 
     .explain_text {
         margin: 4px auto;
-        padding: 6px 0 16px 0;
+        padding: 6px 0 10px 0;
         width: 96%;
         background: none;
         border: none;
@@ -326,8 +315,8 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
     .form_input,
     .form_message {
         display: block;
-        padding-right: 0;
-        width: 98%;
+        margin-right: 20px;
+        padding-right: 0px; 
     }
     .form_input,
     .form_message {
@@ -345,10 +334,16 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
         }
         cursor: text;
     }
+    .form_label {
+        width: 98%;
+    }
     .form_input {
-        height: 24px;
+        width: 96%;
+        height: 20px;
+        padding: 4px 8px 2px 8px; 
     }
     .form_message {
+        width: 98%;
         padding-bottom: 0px;
     }
     .open_space {
@@ -362,14 +357,14 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
         height: 26px;
         margin-top: 12px;
         padding: 2px 6px;
-        color: $btn_text;
+        color: $text_color;
         font-family: $btn_font;
         font-size: 20px;
         font-weight: 900;
         text-align: center;
         background: $btn_bg;
         border: 1px solid rgba(12, 107, 107, 0.2);
-        border-radius: 6px;
+        border-radius: 3px;
 
         &:hover {
             cursor: pointer;
@@ -384,9 +379,11 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
 .contact_footer {
     width: 100%;
     height: 36px;
+    overflow: hidden;
     background: green;
     border-top: $borders;
-    border-top-width: 4px;
+    border-top-width: 2px;
+
 
     .window_btn {
         display: flex;
@@ -396,12 +393,10 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
         height: 36px;
         padding-top: 4px;
         background: $btn_bg;
-        border: 1px solid $btn_bg;
-        border-bottom-right-radius: 5px;
-        border-bottom-left-radius: 5px;
+        border: none;
 
         p {
-            color: $btn_text;
+            color: $text_color;
             font-family: $btn_font;
             font-size: 18px;
             font-weight: 700;
@@ -419,10 +414,9 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
         &:hover {
             cursor: pointer;
             background: $hover_bg;
-            border: 1px solid rgba($nav_bg, 0.2);
 
             span {
-                color: $nav_bg;
+                color: $text_color;
             }
             p {
                 color: $hover_textcolor;
@@ -444,7 +438,7 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
 .explain_visible,
 .contact_visible {
     display: block;
-    height: 58.3rem;
+    height: 59.8rem;
     margin: 0 auto;
     padding: 0 8px;
     position: absolute;
@@ -452,7 +446,7 @@ $text_border: 1px solid rgba(148, 108, 59, 0.2);
     z-index: 2;
 
     h3 {
-        padding-top: 10px;
+        padding-top: 8px;
         color: white;
         font-family: $btn_font;
         font-size: 18px;

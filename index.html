@@ -12,6 +12,7 @@
 
     <link href="css/nav_and_header.css" rel="stylesheet" type="text/css">
     <link href="css/stylesheet_index.css" rel="stylesheet" type="text/css">
+    <link href="css/responsiveness.css" rel="stylesheet" type="text/css">
     
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&family=Catamaran:wght@100;200;300;400;500;600;700;800;900&family=Gruppo&family=Jura:wght@300;400;500;515;600;700&family=Varela+Round&display=swap" rel="stylesheet"> 
 </head>
@@ -28,17 +29,20 @@
             </button>
         </div>
 
-        <div class="nav_btn_box">  
-            <button class="navButton" id="navRecipeBtn"><p>Recipe</p></button>
-        </div>
+        <div class="main_btn_box">
+            <div class="nav_btn_box">  
+                <button class="navButton" id="navRecipeBtn"><p>Recipe</p></button>
+            </div>
 
-        <div class="nav_btn_box">
-            <button class="navButton" id="navExplainBtn"><p>How it works?</p></button>
-        </div>
+            <div class="nav_btn_box">
+                <button class="navButton" id="navExplainBtn"><p>How it works?</p></button>
+            </div>
 
-        <div class="nav_btn_box">
-            <button class="navButton" id="navContactBtn"><p>Contact</p></button>
+            <div class="nav_btn_box">
+                <button class="navButton" id="navContactBtn"><p>Contact</p></button>
+            </div>
         </div>
+        
     </nav>
 
     <header class="header_box" id="headerBox">
@@ -151,7 +155,7 @@
     <article class="explain_hidden" id="explainSmartFridge">
         <h3>Click on the text to go to the site...</h3>
         
-        <div class="popup_box explain_app" id="explainBox">
+        <div class="popup_box explain_box" id="explainBox">
             <header class="article_header explain_header" id="explainHeader">
                 <div class="photo_box explain_photo_box" id="photoExplainBox">
                     <img class="photo explain_photo" id="explainImage" src="assets/img/food-02-small.jpg" alt="">
@@ -194,7 +198,7 @@
     <article class="contact_hidden" id="contactSmartFridge">
         <h3>Click the button bellow to close the form...</h3>
 
-        <div class="popup_box contact_app" id="contactBox"> 
+        <div class="popup_box contact_box" id="contactBox"> 
             <header class="article_header contact_header" id="contactHeader">
                 <div class="photo_box contact_photo_box" id="photoContactBox">
                     <img class="photo contact_photo" id="contactImage" src="assets/img/food-03-small.jpg" alt="">
@@ -277,9 +281,7 @@
                     <img class="photo recipe_photo" id="recipeImage" src="assets/img/food-01-small.jpg" alt="">
                 </div>
                 <div class="title_box recipe_title_box" id="recipeTitleBox">
-                    <div class="open_space"></div>
-                    <h3 class="article_title recipe_title" id="recipeTitle">The recipe...</h3>
-                    <div class="open_space"></div>
+                    <h3 class="article_title recipe_title" id="recipeTitle">The recipe...</h3>  
                 </div>
             </header>
             <section class="text_box recipe_text_box" id="recipeContentBox">

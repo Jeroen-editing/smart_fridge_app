@@ -1,0 +1,81 @@
+/* Modern Smartphone */
+@media (min-width: 360px) {
+  .visible_nav .nav_btn_box .navButton {
+    padding: 4px 8px 5px 8px; }
+
+  .header_box .webpage_name .title {
+    letter-spacing: 2px; }
+
+  .article_header {
+    height: 78px; }
+    .article_header .photo_box {
+      width: 38%; }
+    .article_header .title_box .article_title {
+      font-size: 24px; }
+
+  .ingredient_box {
+    min-height: 14.25rem; }
+
+  .fridge_box .fridge_content {
+    min-height: 14.25rem; }
+
+  .text_box,
+  .popup_text_box {
+    padding: 0px 14px 12px 14px; }
+    .text_box .text_title,
+    .text_box .form_label,
+    .popup_text_box .text_title,
+    .popup_text_box .form_label {
+      min-height: 1.5rem;
+      min-width: 200px;
+      margin-top: 14px; }
+    .text_box .about_text_title,
+    .popup_text_box .about_text_title {
+      margin-top: 12px; } }
+/* Mini tablet */
+@media (min-width: 490px) {
+  .visible_nav .nav_btn_box .navButton {
+    padding: 4px 12px 5px 12px; }
+
+  .header_box .webpage_name .title {
+    letter-spacing: 4px; }
+
+  .article_header {
+    height: 100px; }
+    .article_header .photo_box {
+      width: 38%; }
+    .article_header .title_box .article_title {
+      padding: 8px 0 8px 14px;
+      font-size: 30px; }
+
+  .ingredient_box {
+    min-height: 15.8rem; }
+
+  .fridge_box .fridge_content {
+    min-height: 15.8rem; }
+
+  .text_box,
+  .popup_text_box {
+    padding: 0px 14px 12px 14px; }
+    .text_box .text_title,
+    .text_box .form_label,
+    .popup_text_box .text_title,
+    .popup_text_box .form_label {
+      min-height: 1.5rem;
+      min-width: 200px;
+      margin-top: 14px; }
+    .text_box .about_text_title,
+    .popup_text_box .about_text_title {
+      margin-top: 12px; }
+    .text_box .explain_text,
+    .popup_text_box .explain_text {
+      padding-bottom: 12px; }
+
+  .contact_form_box {
+    max-height: 410px; }
+
+  .contact_footer {
+    position: sticky;
+    bottom: 0px; } }
+
+/*# sourceMappingURL=responsiveness.css.map */
